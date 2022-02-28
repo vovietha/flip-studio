@@ -13,8 +13,8 @@ class FkParentIdColumnToCatalogsTable extends Migration
      */
     public function up()
     {
-        Schema::table('catalogs_', function (Blueprint $table) {
-            $table->column('parent_id')->references('id')->on('catalogs');
+        Schema::table('catalogs', function (Blueprint $table) {
+            $table->foreign('parent_id')->references('id')->on('catalogs');
         });
     }
 

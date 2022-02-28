@@ -14,7 +14,7 @@ class FkProductIdColumnToCatalogProductTable extends Migration
     public function up()
     {
         Schema::table('catalog_product', function (Blueprint $table) {
-            $table->column('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

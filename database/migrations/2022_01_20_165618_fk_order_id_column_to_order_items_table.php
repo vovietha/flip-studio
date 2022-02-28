@@ -14,7 +14,7 @@ class FkOrderIdColumnToOrderItemsTable extends Migration
     public function up()
     {
         Schema::table('order_items', function (Blueprint $table) {
-            $table->column('order_id')->references('id')->on('orders');
+            $table->foreign('order_id')->references('id')->on('orders');
         });
     }
 

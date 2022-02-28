@@ -14,7 +14,7 @@ class FkImageIdColumnToMappingImagesTable extends Migration
     public function up()
     {
         Schema::table('mapping_images', function (Blueprint $table) {
-            $table->column('image_id')->references('id')->on('images');
+            $table->foreign('image_id')->references('id')->on('images');
         });
     }
 

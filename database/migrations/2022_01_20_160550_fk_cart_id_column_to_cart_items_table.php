@@ -14,7 +14,7 @@ class FkCartIdColumnToCartItemsTable extends Migration
     public function up()
     {
         Schema::table('cart_items', function (Blueprint $table) {
-            $table->foreign('cart_id')->references('id')->on('cart_id');
+            $table->foreign('cart_id')->references('id')->on('cart_items');
         });
     }
 

@@ -14,7 +14,7 @@ class FkThumbnailIdColumnToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->column('thumbnail_id')->references('id')->on('images');
+            $table->foreign('thumbnail_id')->references('id')->on('images');
         });
     }
 
