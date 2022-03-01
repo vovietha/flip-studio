@@ -12,6 +12,20 @@ var mobileMenu = document.querySelector('.mobile-menu');
 var mobileCart = document.querySelector('.mobile-cart');
 mobileMenuBtn.addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
+}); // 
+
+var forgotPasswordLink = document.querySelector('.forgot-password-link');
+var loginForm = document.querySelector('.login-form');
+var forgotPasswordForm = document.querySelector('.forgot-password-form');
+var loginHereLink = document.querySelector('.login-here-link');
+forgotPasswordLink.addEventListener('click', function () {
+  loginForm.classList.add('hidden');
+  forgotPasswordForm.classList.remove('hidden');
+});
+loginHereLink.addEventListener('click', function () {
+  loginForm.classList.remove('hidden');
+  loginForm.classList.add('flex');
+  forgotPasswordForm.classList.add('hidden');
 });
 
 /***/ }),
