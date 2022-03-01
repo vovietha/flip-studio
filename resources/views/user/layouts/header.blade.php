@@ -15,14 +15,14 @@
       </div>
       {{-- PRIMARY NAV --}}
       <div class="hidden md:flex space-x-3 text-sm">
-        <a href="/collections" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">COLLECTIONS</a>
-        <a href="/shop" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">SHOP</a>
+        <a href="/collections" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('collections') ? 'active' : ''}}">COLLECTIONS</a>
+        <a href="/shop" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop') ? 'active' : ''}}">SHOP</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
       </div>
       {{-- SECONDARY NAV --}}
       <div class="hidden md:flex text-sm">
-        <a href="/login" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100">ACCOUNT</a>
-        <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100">BAG</a>
+        <a href="/login" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">ACCOUNT</a>
+        <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('cart') ? 'active' : ''}}">BAG</a>
       </div>
       {{-- CART --}}
       <div class="mobile-cart flex md:hidden">
@@ -36,8 +36,8 @@
   </div>
   {{-- MOBILE MENU --}}
   <div class="mobile-menu hidden md:hidden">
-    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
-    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
-    <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
+    <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">COLLECTIONS</a>
+    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">SHOP</a>
+    <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">ABOUT</a>
   </div>
 </nav>
