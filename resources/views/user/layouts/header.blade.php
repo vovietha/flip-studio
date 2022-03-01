@@ -3,16 +3,16 @@
     <div class="flex justify-between items-center">
       {{-- LOGO --}}
       <div>
-        <a href="#" class="text-lg font-bold py-4 px-3">FLIP.STUDIO</a>
+        <a href="#" class="text-xl font-bold px-3">FLIP.STUDIO</a>
       </div>
       {{-- PRIMARY NAV --}}
-      <div class="hidden md:flex space-x-3">
+      <div class="hidden md:flex space-x-3 text-sm">
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">COLLECTIONS</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">SHOP</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
       </div>
       {{-- SECONDARY NAV --}}
-      <div class="hidden md:flex">
+      <div class="hidden md:flex text-sm">
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100">ACCOUNT</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100">BAG</a>
       </div>
