@@ -509,6 +509,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -532,6 +535,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-16 {
   height: 4rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
+.h-7 {
+  height: 1.75rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -636,6 +645,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0px;
   padding-right: 0px;
 }
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -730,6 +743,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .duration-100 {
   transition-duration: 100ms;
 }
+.duration-300 {
+  transition-duration: 300ms;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -797,6 +813,14 @@ body {
     display: none;
   }
 
+  .md\:h-0 {
+    height: 0px;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -808,6 +832,11 @@ body {
   .md\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 

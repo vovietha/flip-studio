@@ -7,7 +7,12 @@
   \*****************************/
 /***/ (() => {
 
-
+var mobileMenuBtn = document.querySelector('.mobile-menu-button');
+var mobileMenu = document.querySelector('.mobile-menu');
+var mobileCart = document.querySelector('.mobile-cart');
+mobileMenuBtn.addEventListener('click', function () {
+  mobileMenu.classList.toggle('hidden');
+});
 
 /***/ }),
 
