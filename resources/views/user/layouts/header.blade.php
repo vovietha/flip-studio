@@ -1,4 +1,4 @@
-<nav class="bg-white">
+<nav class="bg-white fixed w-full">
   <div class="max-w-7xl mx-auto px-2">
     <div class="flex justify-between items-center">
       {{-- MOBILE BUTTON --}}
@@ -36,8 +36,10 @@
   </div>
   {{-- MOBILE MENU --}}
   <div class="mobile-menu hidden md:hidden">
-    <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">COLLECTIONS</a>
-    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">SHOP</a>
-    <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200 {{request()->is('cart') ? 'active' : ''}}">ABOUT</a>
+    <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
+    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
+    <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
+    <a href="/login" class="block py-2 px-4 text-sm hover:bg-gray-200">ACCOUNT</a>
+    <a href="/bag" class="block py-2 px-4 text-sm hover:bg-gray-200">BAG</a>
   </div>
 </nav>

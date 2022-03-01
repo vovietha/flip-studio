@@ -3,7 +3,10 @@
 @section('content')
   <div class="flex flex-col item-center mx-auto px-4 md:px-0 max-w-xl md:max-w-3xl my-[30px]">
     <div class="text-center space-y-4">
-      <p>We are here for you!</p>
+      <div class="my-5">
+        <h1 class="text-center text-3xl font-bold">CONTACT</h1>
+        <p class="font-thin">We are here for you!</p>
+      </div>
       <p>Email us at <span class="underline">flipstudioteam@gmail.com</span> or text us at <span class="underline">+84 678 333 414.</span></p>
       <p>We will get back to your message between <span class="underline">Monday - Sunday 9:30am - 9:30pm  (GMT+7)</span></p>
     </div>
