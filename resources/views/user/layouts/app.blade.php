@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{-- CAROUSEL CSS --}}
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   {{-- CSS --}}
   <link rel="stylesheet" href="{{mix('css/app.css')}}">
   {{-- GOOGLE FONT - POPPINS --}}
@@ -17,10 +19,15 @@
 </head>
 <body>
   @include('user.layouts.header')
-  @yield('content')
+  <div class="py-[52px]">
+    @yield('content')
+  </div>
   @include('user.layouts.footer')
 
+  {{-- CAROUSEL --}}
   {{-- APP JS --}}
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="{{mix('js/app.js')}}"></script>
+  <script src="{{mix('js/swiper.js')}}"></script>
 </body>
 </html>

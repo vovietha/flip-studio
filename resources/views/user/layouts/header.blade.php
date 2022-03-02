@@ -1,4 +1,4 @@
-<nav class="bg-white fixed w-full">
+<nav class="fixed w-full">
   <div class="max-w-7xl mx-auto px-2">
     <div class="flex justify-between items-center">
       {{-- MOBILE BUTTON --}}

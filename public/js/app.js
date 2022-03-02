@@ -12,8 +12,7 @@ var mobileMenu = document.querySelector('.mobile-menu');
 var mobileCart = document.querySelector('.mobile-cart');
 mobileMenuBtn.addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
-}); // 
-
+});
 var forgotPasswordLink = document.querySelector('.forgot-password-link');
 var loginForm = document.querySelector('.login-form');
 var forgotPasswordForm = document.querySelector('.forgot-password-form');
