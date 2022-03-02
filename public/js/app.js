@@ -7,11 +7,16 @@
   \*****************************/
 /***/ (() => {
 
-var mobileMenuBtn = document.querySelector('.mobile-menu-button');
+var mobileOpenMenuBtn = document.querySelector('.mobile-open-menu');
+var mobileCloseMenuBtn = document.querySelector('.mobile-close-menu');
 var mobileMenu = document.querySelector('.mobile-menu');
 var mobileCart = document.querySelector('.mobile-cart');
-mobileMenuBtn.addEventListener('click', function () {
+mobileOpenMenuBtn.addEventListener('click', function () {
   mobileMenu.classList.toggle('hidden');
+  mobileMenu.style.transform = "translateX(0%)";
+});
+mobileCloseMenuBtn.addEventListener('click', function () {
+  mobileMenu.style.transform = "translateX(-100%)";
 });
 var forgotPasswordLink = document.querySelector('.forgot-password-link');
 var loginForm = document.querySelector('.login-form');

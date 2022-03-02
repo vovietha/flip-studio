@@ -1,9 +1,9 @@
-<nav class="fixed w-full">
+<nav class="fixed w-full z-[1000] bg-white">
   <div class="max-w-7xl mx-auto px-2">
     <div class="flex justify-between items-center">
       {{-- MOBILE BUTTON --}}
       <div class="md:hidden flex items-center py-4">
-        <button class="mobile-menu-button">
+        <button class="mobile-open-menu">
           <span class="material-icons">
             menu
           </span>
@@ -35,7 +35,12 @@
     </div>
   </div>
   {{-- MOBILE MENU --}}
-  <div class="mobile-menu hidden md:hidden">
+  <div class="mobile-menu bg-white hidden md:hidden top-[52px] translate-x-[-100%] transition duration-300 fixed h-full w-full space-y-4">
+    <button class="mobile-close-menu flex ml-auto grow-1 py-2 px-4">
+      <span class="material-icons">
+        close
+        </span>
+    </button>
     <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
     <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
     <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>

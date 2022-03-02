@@ -2,16 +2,9 @@
 @section('title', 'Shop')
 @section('content')
   <div>
+    @include('user.layouts.sidebar')
     <div>
-      <h1>ALL CATEGORIES</h1>
-      <div>
-        
-      </div>
-    </div>
-    <div>
-        @foreach()
-          <div></div>
-        @endforeach
+       
     </div>
     <div>
       <h1>SORT</h1>

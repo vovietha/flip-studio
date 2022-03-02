@@ -1,10 +1,14 @@
-const mobileMenuBtn = document.querySelector('.mobile-menu-button')
+const mobileOpenMenuBtn = document.querySelector('.mobile-open-menu')
+const mobileCloseMenuBtn = document.querySelector('.mobile-close-menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 const mobileCart = document.querySelector('.mobile-cart')
-mobileMenuBtn.addEventListener('click', () => {
+mobileOpenMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden')
+  mobileMenu.style.transform = "translateX(0%)"
 })
-
+mobileCloseMenuBtn.addEventListener('click', () => {
+  mobileMenu.style.transform = "translateX(-100%)"
+})
 const forgotPasswordLink = document.querySelector('.forgot-password-link')
 const loginForm = document.querySelector('.login-form')
 const forgotPasswordForm = document.querySelector('.forgot-password-form')

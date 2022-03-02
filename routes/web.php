@@ -40,3 +40,6 @@ Route::get('/shipping', function () {
 Route::get('/shop', function () {
     return view('user.shop');
 });
+Route::get('/all', function () {
+    return view('user.layouts.list-item');
+});
