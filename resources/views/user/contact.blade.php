@@ -3,7 +3,7 @@
 @section('content')
   <div class="flex flex-col item-center mx-auto px-4 md:px-0 max-w-xl md:max-w-3xl my-[30px]">
     <div class="text-center space-y-4">
-      <div class="my-5">
+      <div class="my-4">
         <h1 class="text-center text-3xl font-bold">CONTACT</h1>
         <p class="font-thin">We are here for you!</p>
       </div>

@@ -40,3 +40,15 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.swiper-button-next {
+  color: black;
+}
+.swiper-button-prev {
+  color: black;
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
+.swiper-pagination-bullet-active {
+  background-color: black;
+}
