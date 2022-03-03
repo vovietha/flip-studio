@@ -22,23 +22,23 @@
       <p class="text-sm w-[400px] text-gray-500 leading-6 text-justify" >“Sustainability” is a concept that defines development in all aspects but still ensures that development exists in a state of balance. Bringing the concept of "sustainability" into interior products and services is a pioneering and challenging step that FLIP STUDIO always strives to spread and inspire a positive lifestyle, sustainable consumption and more for a green planet's future.</p>
     </div>
     <div class="w-full md:w-[50%] p-10 md:pl-10">
-      <img src="https://images.unsplash.com/photo-1617978241112-898785df45b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="">
+      <img src="img/about-img/about-img-4.jpeg" alt="">
     </div>
   </div>
   {{-- CONTENT-3 --}}
   <div class="w-full">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2800&q=80" alt="">
+    <img src="img/about-img/about-img-5.jpeg" alt="">
   </div>
   {{-- CONTENT-4 --}}
   <div class="flex flex-col md:flex-row space-x-0 md:space-x-[100px] space-y-[100px] md:space-y-0 justify-between">
-    <div class="grow">
-      <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+    <div class="w-full">
+      <img src="img/about-img/about-img-1.jpg" alt="">
     </div>
     <div class="flex flex-col w-full px-10 md:px-0">
       <h1 class="text-xl mb-7 font-medium">THE BRANDNAME HAS BEEN BUILT</h1>
       <p class="text-sm text-gray-500 leading-6 text-justify">FLIP STUDIO brand is recognized as an impressive, prestigious and high-level interior designing company. Customers come to us to find an expert in interior design and decoration that always creates unique and impressive works. Each of these works give us and our colleagues a new challenge in the face of high responsibility.</p>
       <div class="w-full mt-10 py-8 md:py-0">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1316&q=80" alt="">
+        <img src="img/about-img/about-img-2.jpeg" alt="">
       </div>
     </div>
   </div>
