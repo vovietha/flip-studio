@@ -16,12 +16,12 @@
     </div>
   </div>
   {{-- CONTENT-2  --}}
-  <div class="flex items-center justify-around flex-col md:flex-row">
+  <div class="flex items-center justify-around flex-col md:flex-row px-10 md:px-0">
     <div>
       <h1 class="text-xl mb-7 font-medium text-center md:text-left">SUSTAINABILITY</h1>
-      <p class="text-sm w-[400px] text-gray-500 leading-6 text-justify" >“Sustainability” is a concept that defines development in all aspects but still ensures that development exists in a state of balance. Bringing the concept of "sustainability" into interior products and services is a pioneering and challenging step that FLIP STUDIO always strives to spread and inspire a positive lifestyle, sustainable consumption and more for a green planet's future.</p>
+      <p class="text-sm text-gray-500 leading-6 text-justify" >“Sustainability” is a concept that defines development in all aspects but still ensures that development exists in a state of balance. Bringing the concept of "sustainability" into interior products and services is a pioneering and challenging step that FLIP STUDIO always strives to spread and inspire a positive lifestyle, sustainable consumption and more for a green planet's future.</p>
     </div>
-    <div class="w-full md:w-[50%] p-10 md:pl-10">
+    <div class="flex grow pt-10 md:pl-10">
       <img src="img/about-img/about-img-4.jpeg" alt="">
     </div>
   </div>
