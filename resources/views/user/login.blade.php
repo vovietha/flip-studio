@@ -1,18 +1,24 @@
 @extends('user.layouts.app')
 @section('title', 'Login')
 @section('content')
-  <div class="flex flex-col item-center mx-auto max-w-7xl mb-0 py-20 md:py-5">
+  <div class="flex flex-col item-center mx-auto max-w-7xl mb-0 py-20 md:py-3">
     @if ($errors->any())
           <div class="">
             <ul class="w-ful text-center">
                 @foreach ($errors->all() as $error)
-                    <li class="bg-red-700 text-white w-full">{{ $error }}</li>
+                    <li class="bg-red-700 text-white w-full flex items-center justify-center text-sm mb-1"><span class="material-icons mr-1">
+                      report_problem
+                      </span>
+                      {{ $error }}</li>
                 @endforeach
             </ul>
           </div>
         @endif
         @if (session('status'))
-          <div class="bg-green-700 text-white w-full text-center">
+          <div class="bg-green-700 text-white w-full flex items-center justify-center text-sm">
+            <span class="material-icons mr-1">
+              check
+            </span>
            {{ session('status') }}
           </div>
         @endif
