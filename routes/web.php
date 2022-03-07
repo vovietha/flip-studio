@@ -14,7 +14,7 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// CUSTOMER ROUTE
 Route::get('/', function () {
     return view('user.home');
 });
@@ -54,3 +54,7 @@ Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");
 Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 // 
+// ADMIN ROUTE
+Route::get('/admin', function() {
+    return view('admin.login');
+});
