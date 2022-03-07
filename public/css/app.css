@@ -541,6 +541,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+.mr-3 {
+  margin-right: 0.75rem;
+}
 .block {
   display: block;
 }
@@ -583,6 +586,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
+.h-\[120px\] {
+  height: 120px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -609,6 +615,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4 {
   width: 1rem;
+}
+.w-\[220px\] {
+  width: 220px;
+}
+.w-\[150px\] {
+  width: 150px;
+}
+.w-\[180px\] {
+  width: 180px;
+}
+.w-\[170px\] {
+  width: 170px;
+}
+.w-\[\] {
+  width: ;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -637,6 +658,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .flex-col {
   flex-direction: column;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 .items-center {
   align-items: center;
@@ -697,6 +721,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 .border {
   border-width: 1px;
@@ -790,6 +817,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-1 {
   padding: 0.25rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .py-4 {
   padding-top: 1rem;
