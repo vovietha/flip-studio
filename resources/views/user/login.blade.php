@@ -1,8 +1,22 @@
 @extends('user.layouts.app')
 @section('title', 'Login')
 @section('content')
-  <div class="flex flex-col item-center mx-auto max-w-7xl mb-0 py-20 md:py-10">
-    <h1 class="w-full my-[30px] text-center text-bold text-2xl">LOGIN OR REGISTER</h1>
+  <div class="flex flex-col item-center mx-auto max-w-7xl mb-0 py-20 md:py-5">
+    @if ($errors->any())
+          <div class="">
+            <ul class="w-ful text-center">
+                @foreach ($errors->all() as $error)
+                    <li class="bg-red-700 text-white w-full">{{ $error }}</li>
+                @endforeach
+            </ul>
+          </div>
+        @endif
+        @if (session('status'))
+          <div class="bg-green-700 text-white w-full text-center">
+           {{ session('status') }}
+          </div>
+        @endif
+    <h1 class="w-full my-[20px] text-center text-bold text-2xl">LOGIN OR REGISTER</h1>
     <div class="flex flex-col md:flex-row justify-between">
       {{-- LOGIN --}}
       <form method="post" action="{{route('login')}}" class="login-form flex flex-col w-full px-5 py-5 md:px-20 md:py-0 space-y-6 mb-10 md:mb-0 border-r-0 md:border-r-[1px] border-[#ccc] bg-black md:bg-white">
@@ -57,20 +71,6 @@
             I accept the <a href="#" class="text-black hover:underline">Terms of Use</a> & <a href="#" class="text-black hover:underline">Privacy Policy</a>
           </label>
         </div>
-        @if ($errors->any())
-          <div class="text-red-500">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-          </div>
-        @endif
-        @if (session('status'))
-          <div class="text-green-500">
-           {{ session('status') }}
-          </div>
-        @endif
         <button type="submit" method="POST" class="w-[40%] h-8 bg-black text-white mx-auto text-sm">CREATE</button>
       </form>
     </div>
