@@ -20,10 +20,26 @@
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
       </div>
       {{-- SECONDARY NAV --}}
+      @auth
+      <div class="hidden md:flex text-sm">
+        <div class="group relative hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">
+        ACCOUNT
+          <div class="group-hover:flex flex-col z-10 hidden bg-white w-[200px] h-[100px] absolute top-10 space-y-3 p-2">
+            <a href="/profile" class="hover:underline text-gray-500 hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">PROFILE</a>
+            <a href="/order-history" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('order-history') ? 'active' : ''}}">ORDER HISTORY</a>
+            <a href="{{route('logout')}}" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">LOG OUT</a>
+          </div>
+
+        
+        </div>
+        <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('cart') ? 'active' : ''}}">BAG</a>
+      </div>
+      @else
       <div class="hidden md:flex text-sm">
         <a href="/login" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">ACCOUNT</a>
         <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('cart') ? 'active' : ''}}">BAG</a>
       </div>
+      @endauth
       {{-- CART --}}
       <div class="mobile-cart flex md:hidden">
         <a href="/cart">

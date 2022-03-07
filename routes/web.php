@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +45,12 @@ Route::get('/shop', function () {
 Route::get('/all', function () {
     return view('user.layouts.list-item');
 });
+//LOGGED IN VIEWS 
+Route::get('/profile', function () {
+    return view('user.profile');
+});
+// 
+Route::post('/register', [UserController::class,"register"])->name("register");
+Route::post('/login', [LoginController::class,"authenticate"])->name("login");
+Route::get('/logout', [LoginController::class,"logout"])->name("logout");
+// 
