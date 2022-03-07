@@ -29,8 +29,6 @@
             <a href="/order-history" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('order-history') ? 'active' : ''}}">ORDER HISTORY</a>
             <a href="{{route('logout')}}" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">LOG OUT</a>
           </div>
-
-        
         </div>
         <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('cart') ? 'active' : ''}}">BAG</a>
       </div>
@@ -57,10 +55,27 @@
         close
         </span>
     </button>
+    @auth
+    <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
+    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
+    <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
+    <div class="block py-2 px-4 text-sm hover:bg-gray-200">
+      <div class="group md:relative hover:underline block hover:bg-gray-200 {{request()->is('login') ? 'active' : ''}}">
+      ACCOUNT
+        <div class="group-hover:flex flex-col z-10 hidden w-[200px] h-full md:absolute top-10 space-y-5 p-5">
+          <a href="/profile" class="hover:underline text-gray-500 hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">PROFILE</a>
+          <a href="/order-history" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('order-history') ? 'active' : ''}}">ORDER HISTORY</a>
+          <a href="{{route('logout')}}" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">LOG OUT</a>
+        </div>
+      </div>
+    </div>
+    <a href="/bag" class="block py-2 px-4 text-sm hover:bg-gray-200">BAG</a>
+    @else
     <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
     <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
     <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
     <a href="/login" class="block py-2 px-4 text-sm hover:bg-gray-200">ACCOUNT</a>
     <a href="/bag" class="block py-2 px-4 text-sm hover:bg-gray-200">BAG</a>
+    @endauth
   </div>
 </nav>
