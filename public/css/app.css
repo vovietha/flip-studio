@@ -605,6 +605,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
 }
@@ -668,6 +671,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-10 {
   width: 2.5rem;
 }
+.w-\[20px\] {
+  width: 20px;
+}
+.w-\[30px\] {
+  width: 30px;
+}
+.w-\[\] {
+  width: ;
+}
+.w-\[200\] {
+  width: 200;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -685,6 +700,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grow {
   flex-grow: 1;
+}
+.table-auto {
+  table-layout: auto;
 }
 .translate-x-\[-100\%\] {
   --tw-translate-x: -100%;
@@ -758,6 +776,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -913,6 +941,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-8 {
   padding-top: 2rem;
 }
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
 .text-center {
   text-align: center;
 }
@@ -978,6 +1009,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
@@ -1246,6 +1283,11 @@ body {
   .md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:pl-10 {
