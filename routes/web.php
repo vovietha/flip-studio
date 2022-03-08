@@ -48,7 +48,7 @@ Route::get('/all', function () {
 //LOGGED IN VIEWS 
 Route::get('/profile', function () {
     return view('user.profile');
-});
+})->middleware('auth');
 Route::get('/ordered-history', function () {
     return view('user.orderedHistory');
 });
