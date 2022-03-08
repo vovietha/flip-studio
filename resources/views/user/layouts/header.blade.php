@@ -11,7 +11,7 @@
       </div>
       {{-- LOGO --}}
       <div>
-        <a href="/" class="text-xl font-bold px-3">FLIP.STUDIO</a>
+        <a href="/" class="text-xl font-bold">FLIP.STUDIO</a>
       </div>
       {{-- PRIMARY NAV --}}
       <div class="hidden md:flex space-x-3 text-sm">

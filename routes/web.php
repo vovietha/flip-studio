@@ -49,6 +49,9 @@ Route::get('/all', function () {
 Route::get('/profile', function () {
     return view('user.profile');
 });
+Route::get('/ordered-history', function () {
+    return view('user.orderedHistory');
+});
 // 
 Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");
