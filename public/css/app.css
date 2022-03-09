@@ -1137,6 +1137,9 @@ body {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+.focus\:rounded-none:focus {
+  border-radius: 0px;
+}
 .focus\:outline-black:focus {
   outline-color: #000;
 }

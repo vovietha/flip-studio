@@ -51,7 +51,7 @@ Route::get('/profile', function () {
 })->middleware('auth');
 Route::get('/ordered-history', function () {
     return view('user.orderedHistory');
-});
+})->middleware('auth');
 // 
 Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");

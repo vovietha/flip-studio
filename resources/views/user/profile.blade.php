@@ -36,7 +36,7 @@
             {{-- OLD PASSWORD --}}
             <div class="space-y-3">
               <label for="oldPassword" class="mb-3">Old password</label>
-              <input type="password" name="oldPassword" placeholder="" class="border border-[#ccc] h-[35px] text-[12px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full">
+              <input type="password" name="oldPassword" placeholder="" class="border border-[#ccc] h-[35px] text-[12px] mb-[20px] md:m-0 focus:outline-black focus:rounded-none focus:invalid:border-red w-full">
             </div>
             {{-- NEW PASSWORD --}}
             <div class="space-y-3">
