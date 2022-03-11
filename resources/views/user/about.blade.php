@@ -9,8 +9,8 @@
   {{-- CONTENT-1 --}}
   <div class="bg-black text-white p-10">
     <h1 class="text-xl mb-5 font-bold text-center md:text-left">FLIP STUDIO</h1>
-    <div class="flex flex-col md:flex-row items-center space-y-7 md:space-x-7 leading-6">
-      <p class="text-justify">FlIP STUDIO was established on Jan 11, 2022, a warm summer of Saigon was born an online shop, materials are delivered to customers to choose at home. From there, the first products were born.</p>
+    <div class="flex flex-col md:flex-row items-center space-y-7 md:space-y-0 md:space-x-7 leading-6">
+      <p class="text-justify">FLIP STUDIO was established on Jan 11, 2022, a warm summer of Saigon was born an online shop, materials are delivered to customers to choose at home. From there, the first products were born.</p>
       <p class="text-justify">is a creative studio, designing on the desk, choosing materials, creating products, taking photos of products. It is an open space where customers can visit, choose and be consulted about products, so that when bringing the products home, they bring a sense of home. In the studio guests can see the product being photographed in the sun, shortening the distance between the product, the customer and the Flip studio.</p>
       <p class="text-justify">Although each summer will bring a different feeling, but in general, it is hot, vibrant but also cool and leisurely. The feeling of summer is a recipe that blends sunshine with youthful passion, it's passionate and familiar.</p>
     </div>

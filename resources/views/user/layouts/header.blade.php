@@ -25,16 +25,19 @@
         <div class="group relative hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">
         ACCOUNT
           <div class="group-hover:flex flex-col z-10 hidden bg-white absolute top-10 space-y-4 p-5">
-            <a href="/profile" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">
-              PROFILE <span class="material-icons">perm_identity</span>
-            </a>
-            <a href="/order-history" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('order-history') ? 'active' : ''}}">
-              ORDER HISTORY <span class="material-icons">list_alt</span>
-            </a>
-            <a href="{{route('logout')}}" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">
-              LOG OUT <span class="material-icons">logout</span>
-                
-            </a>
+            <div class="flex justify-between space-x-2">
+              <a href="/profile" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">
+                PROFILE</a>
+              <span class="material-icons">perm_identity</span>
+            </div>
+            <div class="flex justify-between space-x-2">
+              <a href="/ordered-history" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
+              <span class="material-icons">list_alt</span>
+            </div>
+            <div class="flex justify-between space-x-2">
+              <a href="{{route('logout')}}" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">LOG OUT </a>
+              <span class="material-icons">logout</span>
+            </div>
           </div>
         </div>
         <a href="/cart" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('cart') ? 'active' : ''}}">BAG</a>
@@ -71,7 +74,7 @@
       ACCOUNT
         <div class="group-hover:flex flex-col z-10 hidden w-[200px] h-full md:absolute top-10 space-y-5 p-5">
           <a href="/profile" class="hover:underline text-gray-500 hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">PROFILE</a>
-          <a href="/order-history" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('order-history') ? 'active' : ''}}">ORDER HISTORY</a>
+          <a href="/ordered-history" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
           <a href="{{route('logout')}}" class="hover:underline text-gray-500 hover:text-gray-900  transition duration-100 {{request()->is('logout') ? 'active' : ''}}">LOG OUT</a>
         </div>
       </div>
