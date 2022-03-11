@@ -22,29 +22,20 @@ var forgotPasswordLink = document.querySelector('.forgot-password-link');
 var loginForm = document.querySelector('.login-form');
 var forgotPasswordForm = document.querySelector('.forgot-password-form');
 var loginHereLink = document.querySelector('.login-here-link');
-forgotPasswordLink.addEventListener('click', function () {
-  loginForm.classList.add('hidden');
-  forgotPasswordForm.classList.remove('hidden');
-});
-loginHereLink.addEventListener('click', function () {
-  loginForm.classList.remove('hidden');
-  loginForm.classList.add('flex');
-  forgotPasswordForm.classList.add('hidden');
-}); //Increase/Decrease Input
 
-function increaseValue() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  document.getElementById('number').value = value;
+if (forgotPasswordLink) {
+  forgotPasswordLink.addEventListener('click', function () {
+    loginForm.classList.add('hidden');
+    forgotPasswordForm.classList.remove('hidden');
+  });
 }
 
-function decreaseValue() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value < 1 ? value = 1 : '';
-  value--;
-  document.getElementById('number').value = value;
+if (loginHereLink) {
+  loginHereLink.addEventListener('click', function () {
+    loginForm.classList.remove('hidden');
+    loginForm.classList.add('flex');
+    forgotPasswordForm.classList.add('hidden');
+  });
 }
 
 /***/ }),

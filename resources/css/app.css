@@ -53,22 +53,20 @@ body {
   background-color: black;
 }
 /* Increase/Decrease Input */
-form {
-  width: 300px;
-  margin: 0 auto;
+.cart-form-button {
+  width: 100%;
   text-align: center;
-  padding-top: 50px;
 }
 
-.value-button {
-  display: inline-block;
+.cart-value-button {
+  display:block;
   border: 1px solid #ddd;
   margin: 0px;
   width: 40px;
-  height: 20px;
+  height: 100%;
   text-align: center;
   vertical-align: middle;
-  padding: 11px 0;
+  padding: 7px 0;
   background: #eee;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -78,26 +76,24 @@ form {
   user-select: none;
 }
 
-.value-button:hover {
+.cart-value-button:hover {
   cursor: pointer;
 }
 
-form #decrease {
+/* .cart-form-button #cart-button-decrease {
   margin-right: -4px;
-  border-radius: 8px 0 0 8px;
-}
+} */
 
-form #increase {
+/* .cart-form-button #cart-button-increase {
   margin-left: -4px;
-  border-radius: 0 8px 8px 0;
-}
+} */
 
-form #input-wrap {
+.cart-form-button #input-wrap {
   margin: 0px;
   padding: 0px;
 }
 
-input#number {
+.cart-form-button input#cart-input-number {
   text-align: center;
   border: none;
   border-top: 1px solid #ddd;
@@ -107,8 +103,8 @@ input#number {
   height: 40px;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+.cart-form-button input[type=number]::-webkit-inner-spin-button,
+.cart-form-button input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }

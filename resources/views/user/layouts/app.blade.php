@@ -29,5 +29,6 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="{{mix('js/app.js')}}"></script>
   <script src="{{mix('js/swiper.js')}}"></script>
+  <script src="{{mix('js/cart-value-button.js')}}"></script>
 </body>
 </html>
