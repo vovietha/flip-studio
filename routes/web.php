@@ -25,7 +25,10 @@ Route::get('/cart', function () {
     return view('user.cart');
 });
 Route::get('/collections', function () {
-    return view('user.collections');
+    return view('user.collectionList');
+});
+Route::get('/collections/collection', function () {
+    return view('user.collectionItem');
 });
 Route::get('/contact', function () {
     return view('user.contact');
