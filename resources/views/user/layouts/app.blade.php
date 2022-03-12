@@ -19,7 +19,7 @@
 </head>
 <body>
   @include('user.layouts.header')
-  <div class="py-[52px]">
+  <div class="py-[52px] md:py-15">
     @yield('content')
   </div>
   @include('user.layouts.footer')
