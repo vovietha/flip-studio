@@ -12,7 +12,7 @@
           <div>
             <a href="/collections/collection" class="space-y-3">
               <img src="img/home-img/home-img-3.jpg" alt="">
-              <div>
+              <div class="space-y-1">
                 <h5 class="">ELEGANCE'S COLLECTION</h5>
                 <p class="font-thin text-sm">Style: classic, dynamic and simple</p>
               </div>

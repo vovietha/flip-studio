@@ -424,6 +424,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
 .fixed {
   position: fixed;
 }
@@ -456,6 +489,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .z-10 {
   z-index: 10;
+}
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.row-span-2 {
+  grid-row: span 2 / span 2;
 }
 .float-left {
   float: left;
@@ -586,6 +637,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
+.h-\[500px\] {
+  height: 500px;
+}
+.h-10 {
+  height: 2.5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -612,6 +669,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4 {
   width: 1rem;
+}
+.w-\[500px\] {
+  width: 500px;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -644,11 +704,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -664,9 +730,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .justify-around {
   justify-content: space-around;
-}
-.gap-4 {
-  gap: 1rem;
 }
 .gap-10 {
   gap: 2.5rem;
@@ -725,6 +788,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+.place-self-stretch {
+  place-self: stretch;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -895,9 +971,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+.px-\[\] {
+  padding-left: ;
+  padding-right: ;
+}
+.px-\[200px\] {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.px-\[100px\] {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.px-\[90px\] {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.px-\[80px\] {
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -907,6 +999,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
+}
+.pr-10 {
+  padding-right: 2.5rem;
+}
+.pr-\[100px\] {
+  padding-right: 100px;
 }
 .text-center {
   text-align: center;
@@ -1052,12 +1153,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .duration-300 {
   transition-duration: 300ms;
 }
-.duration-150 {
-  transition-duration: 150ms;
-}
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -1175,10 +1270,6 @@ body {
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-.hover\:ease-in:hover {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .focus\:rounded-none:focus {
@@ -1356,18 +1447,22 @@ body {
     padding-right: 25px;
   }
 
-  .md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .md\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .md\:pr-10 {
+    padding-right: 2.5rem;
   }
 
   .md\:text-left {
