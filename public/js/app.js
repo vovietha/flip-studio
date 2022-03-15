@@ -36,7 +36,18 @@ if (loginHereLink) {
     loginForm.classList.add('flex');
     forgotPasswordForm.classList.add('hidden');
   });
-}
+} // 
+
+
+var refineOpenMenuBtn = document.querySelector('.refine-open-menu');
+var refineCloseMenuBtn = document.querySelector('.refine-close-menu');
+var refineMenu = document.querySelector('.refine-menu');
+refineOpenMenuBtn.addEventListener('click', function () {
+  refineMenu.classList.toggle('hidden');
+});
+refineCloseMenuBtn.addEventListener('click', function () {
+  refineMenu.classList.toggle('hidden');
+});
 
 /***/ }),
 

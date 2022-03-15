@@ -27,4 +27,14 @@ if (loginHereLink) {
     forgotPasswordForm.classList.add('hidden')
   })
 }
+// 
+const refineOpenMenuBtn = document.querySelector('.refine-open-menu')
+const refineCloseMenuBtn = document.querySelector('.refine-close-menu')
+const refineMenu = document.querySelector('.refine-menu')
+refineOpenMenuBtn.addEventListener('click', () => {
+  refineMenu.classList.toggle('hidden')
+})
+refineCloseMenuBtn.addEventListener('click', () => {
+  refineMenu.classList.toggle('hidden')
+})
 

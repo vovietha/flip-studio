@@ -1,14 +1,16 @@
 @extends('user.layouts.app')
 @section('title', 'Shop')
 @section('content')
-  <div class="p-10 grid grid-cols-5">
+  <div class="grid grid-cols-1 md:grid-cols-6">
     @include('user.layouts.sidebar')
     {{-- MOBILE --}}
-    <div class="md:hidden">
-        <button>REFINE</button>
-        <button>SORT</button>
+    <div class="md:hidden w-full text-center">
+        @include('user.layouts.refine&sort')
     </div>
-    <div class="grid grid-cols-1 col-span-3 md:grid-cols-3 ">
+    <div class="md:hidden w-full h-full bg-white">
+      @include('user.layouts.refine')
+    </div>
+    <div class="p-10 grid grid-cols-1 col-span-1 md:col-span-4 md:grid-cols-4 ">
       {{-- CARD-1 --}}
        <div>
         content1
@@ -18,6 +20,10 @@
         content1
        </div>
        {{-- CARD-3 --}}
+       <div>
+        content1
+       </div>
+       {{-- CARD-4 --}}
        <div>
         content1
        </div>
