@@ -1,8 +1,8 @@
 <nav class="fixed w-full z-[1000] bg-white">
-  <div class="max-w-7xl mx-auto px-2">
+  <div class="max-w-7xl mx-auto px-3">
     <div class="flex justify-between items-center">
       {{-- MOBILE BUTTON --}}
-      <div class="md:hidden flex items-center py-4">
+      <div class="md:hidden flex items-center py-3">
         <button class="mobile-open-menu">
           <span class="material-icons">
             menu
