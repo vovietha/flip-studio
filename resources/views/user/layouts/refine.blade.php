@@ -14,6 +14,6 @@
     </div>
   </div>
   <div>
-    <button class="refine-close-menu w-full fixed bottom-0 p-4 border-solid border-[1px] border-black bg-white hover:bg-[#EEEEEE]">CANCEL</button>
+    <button class="refine-close-menu w-full fixed bottom-0 p-3 border-solid border-[1px] border-black bg-white hover:bg-[#EEEEEE]">CANCEL</button>
   </div>
 </div>

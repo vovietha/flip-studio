@@ -1,7 +1,7 @@
 <div class="hidden md:flex flex-col space-y-5">
-  <h1 class="font-medium text-lg">ALL CATEGORIES</h1>
+  <h1 class="font-medium text-md">ALL CATEGORIES</h1>
   <div>
-    <div class="flex flex-col space-y-3">
+    <div class="flex flex-col space-y-3 text-sm">
       <a href="/all" class="hover:underline {{request()->is('all') ? 'active' : ''}}">ALL PRODUCTS</a>
       <a href="/armchairs/*" class="hover:underline {{request()->is('armchairs/*') ? 'active' : ''}}">ARMCHAIRS</a>
       <a href="/loveseats/*" class="hover:underline {{request()->is('loveseats/*') ? 'active' : ''}}">LOVESEAT</a>
