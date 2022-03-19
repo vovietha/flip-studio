@@ -8,7 +8,7 @@
      <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
     </div>
     {{-- INFORMATION PRODUCT --}}
-    <div class="px-20 space-y-3">
+    <div class="px-4 sm:px-7 md:px-9 lg:px-13 space-y-3">
       <h1 class="text-lg">GHẾ GỖ</h1>
       <p class="text-lg">3,200,000 VND</p>
       <div class="text-xs space-y-4">
