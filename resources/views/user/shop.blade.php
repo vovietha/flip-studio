@@ -13,7 +13,7 @@
     <div class="grid grid-cols-1 col-span-1 sm:grid-cols-2 sm:col-span-1  md:col-span-4 md:grid-cols-4 gap-5 my-[100px] md:my-0 ">
       {{-- CARD-1 --}}
        <div>
-         <a href="" class="space-y-3">
+         <a href="/product" class="space-y-3">
            <div>
              <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
            </div>

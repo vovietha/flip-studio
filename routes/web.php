@@ -48,6 +48,9 @@ Route::get('/shop', function () {
 Route::get('/all', function () {
     return view('user.layouts.list-item');
 });
+Route::get('/product', function () {
+    return view('user.detailProduct');
+});
 //LOGGED IN VIEWS 
 Route::get('/profile', function () {
     return view('user.profile');

@@ -22,8 +22,8 @@
       {{-- SECONDARY NAV --}}
       @auth
       <div class="hidden md:flex text-sm">
-        <div class="group relative hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">
-        ACCOUNT
+        <div class="group relative cursor-auto hover:underline text-gray-500 hover:text-gray-900 py-4 px-2 transition duration-100 {{request()->is('login') ? 'active' : ''}}">
+          ACCOUNT
           <div class="group-hover:flex flex-col z-10 hidden bg-white absolute top-10 space-y-4 p-5">
             <div class="flex justify-between space-x-2">
               <a href="/profile" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">

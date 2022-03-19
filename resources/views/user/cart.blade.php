@@ -27,7 +27,7 @@
               <td class="p-[12px] h-full">
                 <form class="cart-form-button flex justify-center items-center h-full">
                   <div class="cart-value-button" id="cart-button-decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                  <input type="number" id="cart-input-number" value="0" />
+                  <input type="number" class="h-[40px]" id="cart-input-number" value="0" />
                   <div class="cart-value-button" id="cart-button-increase" onclick="increaseValue()" value="Increase Value">+</div>
                 </form>
               </td>
@@ -63,7 +63,7 @@
               <p class="text-sm md:text-md">4,160,000 VND</p>
             </div>
             <div class="py-10">
-              <span class="w-full p-[10px] bg-black text-white flex items-center  transition all hover:bg-[#323232] duration-200">
+              <span class="w-full p-[10px] bg-black text-white flex items-center transition-all hover:bg-[#323232] duration-200">
                 <a href="" class="w-full items-center text-center tracking-widest">PROCEED TO CHECKOUT</a>
               </span>
             </div>
