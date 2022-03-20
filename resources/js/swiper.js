@@ -1,3 +1,4 @@
+// HOME PAGE PRODUCT SWIPER
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,

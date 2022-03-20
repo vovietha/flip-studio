@@ -2,6 +2,8 @@
     "/js/app.js": "/js/app.js",
     "/js/test.js": "/js/test.js",
     "/js/swiper.js": "/js/swiper.js",
+    "/js/detail-product-swiper.js": "/js/detail-product-swiper.js",
+    "/js/related-product-swiper.js": "/js/related-product-swiper.js",
     "/js/cart-value-button.js": "/js/cart-value-button.js",
     "/css/test.css": "/css/test.css",
     "/css/app.css": "/css/app.css"

@@ -7,12 +7,12 @@
     <div class="hidden md:block flex-none">
       @include('user.layouts.accountSidebar')
     </div>
-    <div class="px-0 md:px-20 grow">
+    <div class="px-0 md:px-20 grow text-sm">
       <p class="mb-5">Edit your preferences below.</p>
       <form action="" class="space-y-5">
         <div>
           <h5 class="text-md mb-3">Account Information</h5>
-          <div class="px-3 md:px-10 space-y-4 text-sm">
+          <div class="px-3 md:px-10 space-y-4 text-xs">
             {{-- NAME --}}
             <div class="space-y-3">
               <label for="name">Name</label>
@@ -32,7 +32,7 @@
         </div>
         <div>
           <h5 class="text-md mb-3">Account Password</h5>
-          <div class="px-3 md:px-10 space-y-4 text-sm">
+          <div class="px-3 md:px-10 space-y-4 text-xs">
             {{-- OLD PASSWORD --}}
             <div class="space-y-3">
               <label for="oldPassword" class="mb-3">Old password</label>
@@ -47,7 +47,7 @@
         </div>
         <div>
           <h5 class="text-md mb-3">Account Address</h5>
-          <div class="px-3 md:px-10 space-y-4 text-sm">
+          <div class="px-3 md:px-10 space-y-4 text-xs">
             {{-- REGION --}}
             <div class="space-y-3">
               <label for="region">Country/Region</label>

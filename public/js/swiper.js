@@ -3,6 +3,7 @@ var __webpack_exports__ = {};
 /*!********************************!*\
   !*** ./resources/js/swiper.js ***!
   \********************************/
+// HOME PAGE PRODUCT SWIPER
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,

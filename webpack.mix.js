@@ -17,6 +17,8 @@ mix.js('resources/js/app.js', 'public/js')
     ]).js('resources/js/test.js', 'public/js')
     .postCss('resources/css/test.css', 'public/css')
     .js('resources/js/swiper.js', 'public/js')
+    .js('resources/js/detail-product-swiper.js', 'public/js')
+    .js('resources/js/related-product-swiper.js', 'public/js')
     .js('resources/js/cart-value-button', 'public/js')
 
 
