@@ -10,6 +10,10 @@ body {
   color:black;
   text-decoration: underline;
 }
+.mobile-active {
+  padding:7px;
+  border: 1px solid #ccc
+}
 /* SWIPER */
 .swiper {
   width: 100%;
