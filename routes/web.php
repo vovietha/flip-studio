@@ -64,6 +64,6 @@ Route::post('/login', [LoginController::class,"authenticate"])->name("login");
 Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 // 
 // ADMIN ROUTE
-Route::get('/admin', function() {
-    return view('admin.login');
+Route::get('/admin/login', function() {
+    return view('admin.auth.login');
 });
