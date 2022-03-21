@@ -67,3 +67,21 @@ Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 Route::get('/admin/login', function() {
     return view('admin.auth.login');
 });
+Route::get('/admin/dashboard', function() {
+    return view('admin.dashboard');
+});
+Route::get('/admin/products', function() {
+    return view('admin.product');
+});
+Route::get('/admin/categories', function() {
+    return view('admin.category');
+});
+Route::get('/admin/parameter-sets', function() {
+    return view('admin.parameterSet');
+});
+Route::get('/admin/collections', function() {
+    return view('admin.collection');
+});
+Route::get('/admin/accounts', function() {
+    return view('admin.account');
+});

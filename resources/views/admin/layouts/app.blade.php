@@ -16,6 +16,13 @@
 
 </head>
 <body>
-  @yield('content')
+  <div class="flex min-h-screen">
+    <div>
+      @include('admin.layouts.sidebar')
+    </div>
+    <div>
+      @yield('content')
+    </div>
+  </div>
 </body>
 </html>
