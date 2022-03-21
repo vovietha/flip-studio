@@ -5,10 +5,12 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+/* ACTIVE CLASS */
 .active {
   color:black;
   text-decoration: underline;
 }
+/* SWIPER */
 .swiper {
   width: 100%;
   height: 100%;
@@ -57,7 +59,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .productSwiper-slide {
   text-align: center;
   font-size: 18px;
@@ -107,7 +108,7 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-
+/* CART VALUE BUTTON */
 .cart-value-button:hover {
   cursor: pointer;
 }
