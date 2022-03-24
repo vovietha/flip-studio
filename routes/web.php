@@ -1,10 +1,10 @@
 <?php
 
 use App\Models\Catalog;
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,29 +66,28 @@ Route::post('/login', [LoginController::class,"authenticate"])->name("login");
 Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 // 
 // ADMIN ROUTE
-Route::get('/admin/login', function() {
-    return view('admin.auth.login');
-});
-Route::get('/admin/dashboard', function() {
-    return view('admin.dashboard');
-});
-Route::get('/admin/products', function() {
-    return view('admin.product');
-});
-Route::get('/admin/categories', function() {
-
-    $catalogs = Catalog::root()->get();
-
-    return view('admin.category', [
-        'catalogs' => $catalogs
+Route::prefix('admin')->name('admin.')->group(function() {
+    Route::get('/login', function() {
+        return view('admin.auth.login');
+    });
+    Route::get('/dashboard', function() {
+        return view('admin.dashboard');
+    });
+    Route::get('/products', function() {
+        return view('admin.product');
+    });
+    Route::resources([
+        'catalogs' => CatalogController::class,
     ]);
-});
-Route::get('/admin/parameter-sets', function() {
-    return view('admin.parameterSet');
-});
-Route::get('/admin/collections', function() {
-    return view('admin.collection');
-});
-Route::get('/admin/accounts', function() {
-    return view('admin.account');
+    // PARAMETER SET
+    Route::get('/parameter-sets', function() {
+        return view('admin.parameterSet');
+    });
+    Route::get('/collections', function() {
+        return view('admin.collection');
+    });
+    Route::get('/accounts', function() {
+        return view('admin.account');
+    });
+
 });

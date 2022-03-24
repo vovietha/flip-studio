@@ -10,8 +10,8 @@
       </a>
     </div>
     <div class="flex justify-center md:justify-start">
-      <a href="/admin/categories" class="{{request()->is('admin/categories') ? 'active' : ''}} hidden md:block" >CATEGORIES</a>
-      <a href="/admin/categories" class="block md:hidden {{request()->is('admin/categories') ? 'mobile-active' : ''}}">
+      <a href="{{route('admin.catalogs.index')}}" class="{{request()->is('admin/categories') ? 'active' : ''}} hidden md:block" >CATEGORIES</a>
+      <a href="{{route('admin.catalogs.index')}}" class="block md:hidden {{request()->is('admin/categories') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/category_black_24dp.svg" alt="">
       </a>
     </div>

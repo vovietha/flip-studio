@@ -17,7 +17,7 @@ class CreateCatalogsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('detail');
-            $table->unsignedBigInteger('parent_id');
+            $table->unsignedBigInteger('parent_id')->nullable(); 
         });
     }
 
