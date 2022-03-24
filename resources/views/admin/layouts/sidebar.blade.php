@@ -41,10 +41,10 @@
     </div>
   </div>
   <div class="fixed left-6 md:left-5 bottom-0 py-5 md:p-5 tracking-wider flex flex-col justify-center md:justify-start">
-    <div class="items-center space-x-2 py-3 hidden md:flex">
+    <div class="items-center space-x-2 py-3 md:flex">
       <div class="rounded-full bg-black w-5 h-5">
       </div>
-      <p class="text-xs">SONBILL</p>
+      <p class="text-xs hidden md:block">SONBILL</p>
     </div>
     <div>
       <a href="#" class="hidden md:block hover:underline">LOGOUT</a>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Catalog;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
@@ -74,7 +76,12 @@ Route::get('/admin/products', function() {
     return view('admin.product');
 });
 Route::get('/admin/categories', function() {
-    return view('admin.category');
+
+    $catalogs = Catalog::root()->get();
+
+    return view('admin.category', [
+        'catalogs' => $catalogs
+    ]);
 });
 Route::get('/admin/parameter-sets', function() {
     return view('admin.parameterSet');
