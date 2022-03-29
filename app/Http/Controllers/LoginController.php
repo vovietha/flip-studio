@@ -18,6 +18,7 @@ class LoginController extends Controller
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
+            'role' => ['customer'],
         ]);
  
         if (Auth::attempt($credentials)) {
@@ -30,6 +31,18 @@ class LoginController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
+    protected function credentials(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        $credentials['role'] = 'admin';
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended('/dashboard');
+        }
+    }
+    
     public function logout(Request $request)
 {
     Auth::logout();

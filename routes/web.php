@@ -67,9 +67,11 @@ Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 // 
 // ADMIN ROUTE
 Route::prefix('admin')->name('admin.')->group(function() {
-    Route::get('/login', function() {
+    Route::get('/', function() {
         return view('admin.auth.login');
     });
+    Route::post('/login', [LoginController::class,"credentials"])->name("dashboard");
+
     Route::get('/dashboard', function() {
         return view('admin.dashboard');
     });
