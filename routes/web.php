@@ -70,7 +70,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/', function() {
         return view('admin.auth.login');
     });
-    Route::post('/login', [LoginController::class,"credentials"])->name("dashboard");
+    Route::post('/login', [LoginController::class,"credentials"])->name("login");
 
     Route::get('/dashboard', function() {
         return view('admin.dashboard');

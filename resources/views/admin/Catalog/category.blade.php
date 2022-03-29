@@ -44,6 +44,7 @@
               <td class="py-3">{{$child->name}}</td>
               <td class="py-3">{{$child->detail}}</td>
               <td>
+                {{-- <a href="{{ route('admin.catalogs.edit/{{$catalogs->id}}')}}">EDIT</a> --}}
                 <button>
                   <span class="material-icons">
                     highlight_off

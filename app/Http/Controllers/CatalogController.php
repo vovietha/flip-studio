@@ -27,7 +27,7 @@ class CatalogController extends Controller
      */
     public function create()
     {
-        return view('admin.Catalog.AddCategory');
+        return view('admin.Catalog.addCategory');
     }
 
     /**
@@ -60,7 +60,7 @@ class CatalogController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.Catalog.editCategory');
     }
 
     /**
