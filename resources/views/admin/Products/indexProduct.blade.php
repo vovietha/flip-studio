@@ -2,6 +2,9 @@
 @section('title', 'PRODUCT')
 @section('content')
   <div>
-    PRODUCTS
+    <h1>PRODUCTS</h1>
+    <a href="{{ route('admin.products.create')}}">ADD</a>
+    
+    
   </div>
 @endsection
