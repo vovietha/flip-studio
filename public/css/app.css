@@ -509,11 +509,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
 .mb-\[20px\] {
   margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 .mb-5 {
   margin-bottom: 1.25rem;
@@ -551,6 +551,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
 .mb-\[12px\] {
   margin-bottom: 12px;
 }
@@ -562,12 +568,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-0 {
   margin-bottom: 0px;
-}
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-.mr-1 {
-  margin-right: 0.25rem;
 }
 .block {
   display: block;
@@ -1511,16 +1511,12 @@ body {
     background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
-  .md\:p-3 {
-    padding: 0.75rem;
+  .md\:p-5 {
+    padding: 1.25rem;
   }
 
   .md\:p-10 {
     padding: 2.5rem;
-  }
-
-  .md\:p-5 {
-    padding: 1.25rem;
   }
 
   .md\:px-2 {

@@ -38,7 +38,23 @@ class CatalogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $catalogs = new Catalog;
+        $catalogs->name = $request->input('name');
+        $catalogs->detail = $request->input('detail');
+        $catalogs->save();
+        return redirect()->back()->with('status','Catalog added successfully');
+
+        // ADD FILE IMG LÊN DATABASE
+        // if ($request->hasfile('img')); //img của attribute name input
+        // {
+        //     $file = $request->file('img');
+        //     $extension = $file->getClientExtension();
+        //     $filename = time() . '.' . $extension;
+        //     $file->move('uploads/img/', $filename);
+        //     $file->img = $filename; //img ở đây là tên cột trong database
+        // }
+        // $catalogs->save();
+        // return redirect()->back()->with('status','img added');
     }
 
     /**
