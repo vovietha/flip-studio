@@ -76,7 +76,7 @@ class CatalogController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.Catalog.editCategory');
+
     }
 
     /**
@@ -99,6 +99,8 @@ class CatalogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $catalogs = Catalog::find($id);
+        $catalogs->delete();
+        return redirect()->back();
     }
 }

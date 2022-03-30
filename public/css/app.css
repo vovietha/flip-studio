@@ -1057,6 +1057,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[14px\] {
   font-size: 14px;
 }
+.text-\[1px\] {
+  font-size: 1px;
+}
+.text-\[16px\] {
+  font-size: 16px;
+}
 .font-medium {
   font-weight: 500;
 }

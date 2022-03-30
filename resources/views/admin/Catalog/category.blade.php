@@ -6,6 +6,7 @@
     <div>
       <div class="flex justify-between">
         <form method="GET">
+          @csrf
           <select  name="category" id="category" class="form-control border-solid border-[1px] py-2 px-3">
             <option>. . .</option>
               @foreach($catalogs as $catalog)
@@ -44,12 +45,17 @@
               <td class="py-3">{{$child->name}}</td>
               <td class="py-3">{{$child->detail}}</td>
               <td>
-                {{-- <a href="{{ route('admin.catalogs.edit/{{$catalogs->id}}')}}">EDIT</a> --}}
-                <button>
-                  <span class="material-icons">
-                    highlight_off
-                  </span>
-                </button>
+                <form action="{{route('admin.catalogs.destroy',$child->id )}}" method="POST">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit">
+                    <span class="material-icons">
+                      highlight_off
+                    </span>
+                  </button>
+                </form>
+                {{-- <a href="{{route('admin.catalogs.destroy',$child->id )}}">  --}}
+                {{-- </a> --}}
               </td>
             </tr>
             @endforeach
