@@ -4,6 +4,7 @@ use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
 
@@ -79,6 +80,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::resources([
         'catalogs' => CatalogController::class,
         'products' => ProductController::class,
+        'accounts' => AccountController::class,
     ]);
     // PARAMETER SET
     Route::get('/parameter-sets', function() {
@@ -87,8 +89,8 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/collections', function() {
         return view('admin.collection');
     });
-    Route::get('/accounts', function() {
-        return view('admin.account');
-    });
+    // Route::get('/accounts', function() {
+    //     return view('admin.account');
+    // });
 
 });

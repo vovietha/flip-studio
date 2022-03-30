@@ -45,7 +45,7 @@
           <input type="text" name="detail" id="detail" class="border border-[#ccc] h-[35px] text-[16px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5">
         </div>
         <div class="flex flex-col space-y-3 ">
-          <label for="thumbnail_id" class="text-xs">THUMBNAIL_ID: </label>
+          <label for="thumbnail_id" class="text-xs">THUMBNAIL: </label>
           <input type="file" name="thumbnail_id" id="thumbnail_id" class="border border-[#ccc] h-[35px] text-[12px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-1">
         </div>
         <div class="flex flex-col space-y-3 ">
