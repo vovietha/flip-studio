@@ -24,7 +24,7 @@
             <td class="py-3">{{$account->created_at}}</td>
             <td class="py-3">{{$account->updated_at}}</td>
             <td class="py-3 flex items-center space-x-3">
-              <a href="" class="hover:underline">EDIT</a>
+              <a href="{{route('admin.accounts.edit',$account->id )}}" class="hover:underline">EDIT</a>
               <form action="{{route('admin.accounts.destroy',$account->id )}}" method="POST">
                 @csrf
                 @method('DELETE')

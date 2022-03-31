@@ -58,7 +58,8 @@ class AccountController extends Controller
      */
     public function edit($id)
     {
-        //
+        $accounts = Account::find($id);
+        return view('admin.Accounts.editAccount', compact('accounts'));
     }
 
     /**
@@ -70,7 +71,10 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $accounts = Account::find($id);
+        $input = $request->all();
+        $accounts->update($input);
+        return redirect()->back();
     }
 
     /**
