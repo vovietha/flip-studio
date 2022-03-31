@@ -10,14 +10,14 @@
       </a>
     </div>
     <div class="flex justify-center md:justify-start">
-      <a href="{{route('admin.catalogs.index')}}" class="{{request()->is('admin/categories') ? 'active' : ''}} hidden md:block" >CATEGORIES</a>
-      <a href="{{route('admin.catalogs.index')}}" class="block md:hidden {{request()->is('admin/categories') ? 'mobile-active' : ''}}">
+      <a href="{{route('admin.catalogs.index')}}" class="{{request()->is('admin/catalogs') ? 'active' : ''}} hidden md:block" >CATEGORIES</a>
+      <a href="{{route('admin.catalogs.index')}}" class="block md:hidden {{request()->is('admin/catalogs') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/category_black_24dp.svg" alt="">
       </a>
     </div>
     <div class="flex justify-center md:justify-start">
-      <a href="/admin/products" class="{{request()->is('admin/products') ? 'active' : ''}} hidden md:block">PRODUCTS</a>
-      <a href="/admin/products" class="block md:hidden {{request()->is('admin/products') ? 'mobile-active' : ''}}">
+      <a href="{{route('admin.products.index')}}" class="{{request()->is('admin/products') ? 'active' : ''}} hidden md:block">PRODUCTS</a>
+      <a href="{{route('admin.products.index')}}" class="block md:hidden {{request()->is('admin/products') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/shopping_basket_black_24dp.svg" alt="">
       </a>
     </div>
@@ -34,8 +34,8 @@
       </a>
     </div>
     <div class="flex justify-center md:justify-start">
-      <a href="/admin/accounts" class="{{request()->is('admin/accounts') ? 'active' : ''}} hidden md:block">ACCOUNTS</a>
-      <a href="/admin/accounts" class="block md:hidden {{request()->is('admin/accounts') ? 'mobile-active' : ''}}">
+      <a href="{{route('admin.accounts.index')}}" class="{{request()->is('admin/accounts') ? 'active' : ''}} hidden md:block">ACCOUNTS</a>
+      <a href="{{route('admin.accounts.index')}}" class="block md:hidden {{request()->is('admin/accounts') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/manage_accounts_black_24dp.svg" alt="">
       </a>
     </div>

@@ -15,7 +15,7 @@ class CatalogController extends Controller
     public function index()
     {
         $catalogs = Catalog::root()->get();
-        return view('admin.Catalog.category', [
+        return view('admin.Catalog.indexCategory', [
             'catalogs' => $catalogs
         ]);
     }

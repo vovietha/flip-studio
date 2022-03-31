@@ -1050,18 +1050,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 6rem;
   line-height: 1;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 .text-\[14px\] {
   font-size: 14px;
-}
-.text-\[1px\] {
-  font-size: 1px;
-}
-.text-\[16px\] {
-  font-size: 16px;
 }
 .font-medium {
   font-weight: 500;
@@ -1523,14 +1520,6 @@ body {
 
   .md\:p-10 {
     padding: 2.5rem;
-  }
-
-  .md\:p-0 {
-    padding: 0px;
-  }
-
-  .md\:p-2 {
-    padding: 0.5rem;
   }
 
   .md\:p-1 {
