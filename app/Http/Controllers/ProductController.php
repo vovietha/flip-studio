@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('catalogs')->get();
+        $products = Product::with('catalog')->get();
         return view('admin.Products.indexProduct',compact('products'));
     }
 
