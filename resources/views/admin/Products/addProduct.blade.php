@@ -15,13 +15,13 @@
       <form action="{{route(('admin.products.store'))}}" method="POST" enctype="multipart/form-data" class="w-full space-y-4 py-5">
         @csrf
         <div class="flex flex-col space-y-3 ">
-          <label for="category" class="text-xs">CATEGORY</label>
-          <select  name="catalog_id" id="category" class="form-control border-solid border-[1px] py-2 px-3">
+          <label for="catalog_id" class="text-xs">CATEGORY</label>
+          <select  name="catalog_id" id="catalog_id" class="form-control border-solid border-[1px] py-2 px-3">
             <option selected>SELECT CATEGORY</option>
             @foreach($catalogs as $catalog)
                 <option 
                   value="{{$catalog->id}}" 
-                  @if(request()->query('category') == $catalog->id) selected @endif
+                  @if(request()->query('catalog_id') == $catalog->id) selected @endif
                 >
                   {{$catalog->name}}
                 </option>

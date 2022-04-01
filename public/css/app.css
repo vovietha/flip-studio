@@ -424,39 +424,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .visible {
   visibility: visible;
 }
@@ -525,6 +492,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .my-\[30px\] {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -544,18 +519,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-\[20px\] {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-.my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 .mb-\[20px\] {
   margin-bottom: 20px;
@@ -623,9 +586,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .inline-block {
   display: inline-block;
 }
-.inline {
-  display: inline;
-}
 .flex {
   display: flex;
 }
@@ -671,6 +631,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
+.h-\[50px\;\] {
+  height: 50px;;
+}
+.h-\[50px\] {
+  height: 50px;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -706,6 +672,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4 {
   width: 1rem;
+}
+.w-\[\] {
+  width: ;
+}
+.w-\[70px\] {
+  width: 70px;
+}
+.w-\[object-fit\] {
+  width: object-fit;
+}
+.w-\[50px\] {
+  width: 50px;
 }
 .min-w-full {
   min-width: 100%;
@@ -808,6 +786,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -847,11 +830,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -932,10 +910,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
 .bg-contain {
   background-size: contain;
 }
@@ -977,9 +951,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-4 {
   padding: 1rem;
-}
-.p-1 {
-  padding: 0.25rem;
 }
 .px-10 {
   padding-left: 2.5rem;
@@ -1085,9 +1056,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-justify {
   text-align: justify;
 }
-.indent-5 {
-  text-indent: 1.25rem;
-}
 .indent-8 {
   text-indent: 2rem;
 }
@@ -1109,6 +1077,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1127,10 +1099,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .text-\[16px\] {
   font-size: 16px;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .text-\[14px\] {
   font-size: 14px;
@@ -1158,12 +1126,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .leading-7 {
   line-height: 1.75rem;
-}
-.leading-3 {
-  line-height: .75rem;
-}
-.leading-5 {
-  line-height: 1.25rem;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -1401,11 +1363,6 @@ body {
 
 .hover\:bg-\[\#EEEE\]:hover {
   background-color: #EEEE;
-}
-
-.hover\:bg-\[\#ccc\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-900:hover {

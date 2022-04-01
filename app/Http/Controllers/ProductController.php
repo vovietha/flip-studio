@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Catalog;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
 {
@@ -38,8 +39,28 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        Product::create($input);
+        // $input = $request->all();
+        // Product::create($input);
+        // return redirect()->back();
+
+        $products = new Product();
+        $products->catalog_id = $request->input('catalog_id');
+        $products->title = $request->input('title');
+        $products->description = $request->input('description');
+        $products->details = $request->input('details');
+        $products->price = $request->input('price');
+        if ($request->hasfile('thumbnail'))
+        {
+            $file = $request->file('thumbnail');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('uploads/products-img', $filename);
+            $products->thumbnail = $filename;
+
+        }
+        $products->sku = $request->input('sku');
+        $products->stock = $request->input('stock');
+        $products->save();
         return redirect()->back();
     }
 
@@ -62,7 +83,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $products = Product::find($id);
+        return view('admin.Products.editProduct', compact('products'));
     }
 
     /**
@@ -74,7 +96,30 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $products = Product::find($id);
+        $products->catalog_id = $request->input('catalog_id');
+        $products->title = $request->input('title');
+        $products->description = $request->input('description');
+        $products->details = $request->input('details');
+        $products->price = $request->input('price');
+        if ($request->hasfile('thumbnail'))
+        {
+            $destination = 'uploads/products-img'.$products->thumbnail;
+            if (File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $file = $request->file('thumbnail');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('uploads/products-img', $filename);
+            $products->thumbnail = $filename;
+
+        }
+        $products->sku = $request->input('sku');
+        $products->stock = $request->input('stock');
+        $products->update();
+        return redirect()->route('products.index');
     }
 
     /**
@@ -85,6 +130,13 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $products = Product::find($id);
+        $destination = 'uploads/products-img'.$products->thumbnail;
+        if (File::exists($destination))
+        {
+            File::delete($destination);
+        }
+        $products->delete();
+        return redirect()->back();
     }
 }
