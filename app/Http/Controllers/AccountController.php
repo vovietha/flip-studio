@@ -74,7 +74,7 @@ class AccountController extends Controller
         $accounts = Account::find($id);
         $input = $request->all();
         $accounts->update($input);
-        return redirect()->back();
+        return redirect('admin/accounts');
     }
 
     /**

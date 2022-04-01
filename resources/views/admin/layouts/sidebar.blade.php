@@ -47,8 +47,8 @@
       <p class="text-xs hidden md:block">SONBILL</p>
     </div>
     <div>
-      <a href="#" class="hidden md:block hover:underline">LOGOUT</a>
-      <a href="" class="block md:hidden ">
+      <a href="{{route('logout')}}" class="hidden md:block hover:underline">LOGOUT</a>
+      <a href="{{route('logout')}}" class="block md:hidden ">
         <img src="/img/dashboard-icon/logout_black_24dp.svg" alt="">
       </a>
     </div>

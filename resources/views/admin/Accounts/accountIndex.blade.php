@@ -10,6 +10,7 @@
             <th class="font-medium py-3">ID</th>
             <th class="font-medium py-3">USERNAME</th>
             <th class="font-medium py-3">EMAIL</th>
+            <th class="font-medium py-3">ROLE</th>
             <th class="font-medium py-3">CREATED</th>
             <th class="font-medium py-3">UPDATED</th>
             <th class="font-medium py-3"></th>
@@ -21,6 +22,7 @@
             <td class="py-3">{{$account->id}}</td>
             <td class="py-3">{{$account->username}}</td>
             <td class="py-3">{{$account->email}}</td>
+            <td class="py-3">{{$account->role}}</td>></td>
             <td class="py-3">{{$account->created_at}}</td>
             <td class="py-3">{{$account->updated_at}}</td>
             <td class="py-3 flex items-center space-x-3">

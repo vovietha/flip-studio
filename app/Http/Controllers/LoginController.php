@@ -18,39 +18,51 @@ class LoginController extends Controller
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
-            'role' => ['customer'],
         ]);
- 
+        $credentials['role'] = 'customer';
+        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
-            return redirect()->intended('/');
+            $user = Auth::user();
+            return redirect()->route('home');
         }
  
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
     }
-    protected function credentials(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        $credentials['role'] = 'admin';
+    // protected function credentials(Request $request)
+    // {
+    //     $credentials = $request->only('email', 'password');
+    //     $credentials['role'] = 'admin';
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+    //     if (Auth::attempt($credentials)) {
+    //         $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
-        }
-    }
+    //         return redirect()->intended('/dashboard');
+    //     }
+    // }
+
+    // protected function authenticated()
+    // {
+    //     if(Auth::users()->role == 'admin') //1 = Admin Login
+    //     {
+    //         return redirect('dashboard')->with('status','Welcome to your dashboard');
+    //     }
+    //     elseif(Auth::users()->role == 'customer') // Normal or Default User Login
+    //     {
+    //         return redirect('/')->with('status','Logged in successfully');
+    //     }
+    // }
     
     public function logout(Request $request)
-{
-    Auth::logout();
- 
-    $request->session()->invalidate();
- 
-    $request->session()->regenerateToken();
- 
-    return redirect()->back();
-}
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->back();
+    }
 }

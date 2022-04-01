@@ -4,6 +4,7 @@ use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\LoginController as AdminLoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\ProductController;
 // CUSTOMER ROUTE
 Route::get('/', function () {
     return view('user.home');
-});
+})->name('home');
 Route::get('/login', function () {
     return view('user.login');
 });
@@ -62,21 +63,23 @@ Route::get('/profile', function () {
 Route::get('/ordered-history', function () {
     return view('user.orderedHistory');
 })->middleware('auth');
-// 
+//CUSTOMER LOGIN
 Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");
 Route::get('/logout', [LoginController::class,"logout"])->name("logout");
-// 
+
+
 // ADMIN ROUTE
 Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/', function() {
         return view('admin.auth.login');
-    });
-    Route::post('/login', [LoginController::class,"credentials"])->name("login");
+    })->name('adminLogin');
+    Route::post('/', [AdminLoginController::class,'authenticate'])->name('adminLogin');
+    Route::get('/admin/logout', [AdminLoginController::class,"logout"])->name("logout");
 
     Route::get('/dashboard', function() {
         return view('admin.dashboard');
-    });
+    })->name('dashboard')->middleware('isAdmin');
     Route::resources([
         'catalogs' => CatalogController::class,
         'products' => ProductController::class,
