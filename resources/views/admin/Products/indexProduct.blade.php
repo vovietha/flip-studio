@@ -23,7 +23,7 @@
           @foreach($products as $product)
           <tr class="text-center text-sm">
             <td class="py-3">{{$product->id}}</td>
-            <td class="py-3">{{$product->catalog_id}}</td>
+            <td class="py-3">{{$product->catalog->name}}</td>
             <td class="py-3">{{$product->title}}</td>
             <td class="py-3">{{$product->price}}</td>
             <td class="py-3">{{$product->description}}</td>
@@ -33,12 +33,12 @@
             </td>
             <td class="py-3">{{$product->sku}}</td>
             <td class="py-3">{{$product->stock}}</td>
-            <td class="py-3 flex items-center space-x-3">
-              <a href="{{route('admin.products.edit',$product->id )}}" class="hover:underline">EDIT</a>
-              <form action="{{route('admin.products.destroy',$product->id )}}" method="POST">
+            <td class="py-3">
+              <a href="{{route('admin.products.edit',$product->id )}}" class="hover:underline inline px-3">EDIT</a>
+              <form action="{{route('admin.products.destroy',$product->id )}}" method="POST" class="inline">
                 @csrf
                 @method('DELETE')
-                <button type="submit">
+                <button type="submit" class="inline">
                   <span class="material-icons">
                     highlight_off
                   </span>

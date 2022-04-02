@@ -520,6 +520,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -586,6 +590,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .inline-block {
   display: inline-block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -628,14 +635,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[32px\] {
   height: 32px;
 }
-.h-4 {
-  height: 1rem;
-}
-.h-\[50px\;\] {
-  height: 50px;;
-}
 .h-\[50px\] {
   height: 50px;
+}
+.h-4 {
+  height: 1rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -667,23 +671,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-10 {
   width: 2.5rem;
 }
+.w-\[50px\] {
+  width: 50px;
+}
 .w-\[50\%\] {
   width: 50%;
 }
 .w-4 {
   width: 1rem;
-}
-.w-\[\] {
-  width: ;
-}
-.w-\[70px\] {
-  width: 70px;
-}
-.w-\[object-fit\] {
-  width: object-fit;
-}
-.w-\[50px\] {
-  width: 50px;
 }
 .min-w-full {
   min-width: 100%;
@@ -1093,12 +1088,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
-}
-.text-\[16px\] {
-  font-size: 16px;
 }
 .text-\[14px\] {
   font-size: 14px;
