@@ -19,7 +19,7 @@ class ProductController extends Controller
         $products = Product::with('catalog')->get();
         return view('admin.Products.indexProduct',compact('products'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *

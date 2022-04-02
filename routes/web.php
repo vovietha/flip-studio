@@ -4,10 +4,11 @@ use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\Admin\LoginController as AdminLoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\Admin\LoginController as AdminLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +48,9 @@ Route::get('/about', function () {
 Route::get('/shipping', function () {
     return view('user.shipping');
 });
-Route::get('/shop', function () {
-    return view('user.shop');
-});
+Route::get('/shop', [FrontendController::class,"index"]);
+Route::get('shop/{id}', [FrontendController::class,"viewcategory"]);
+
 
 Route::get('/all', function () {
     return view('user.layouts.list-item');
@@ -57,6 +58,9 @@ Route::get('/all', function () {
 Route::get('/product', function () {
     return view('user.detailProduct');
 });
+
+
+
 //LOGGED IN VIEWS 
 Route::get('/profile', function () {
     return view('user.profile');
@@ -69,9 +73,13 @@ Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");
 Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 
-
 // ADMIN ROUTE
 Route::prefix('admin')->name('admin.')->group(function() {
+    Route::resources([
+        'catalogs' => CatalogController::class,
+        'products' => ProductController::class,
+        'accounts' => AccountController::class,
+    ]);
     Route::get('/', function() {
         return view('admin.auth.login');
     })->name('adminLogin');
@@ -81,11 +89,6 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/dashboard', function() {
         return view('admin.dashboard');
     })->name('dashboard')->middleware('isAdmin');
-    Route::resources([
-        'catalogs' => CatalogController::class,
-        'products' => ProductController::class,
-        'accounts' => AccountController::class,
-    ]);
     // PARAMETER SET
     Route::get('/parameter-sets', function() {
         return view('admin.parameterSet');

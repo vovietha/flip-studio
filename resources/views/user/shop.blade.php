@@ -11,48 +11,23 @@
       @include('user.layouts.refine')
     </div>
     <div class="grid grid-cols-1 col-span-1 sm:grid-cols-2 sm:col-span-1  md:col-span-4 md:grid-cols-4 gap-5 my-[100px] md:my-0 ">
+      @foreach($products as $product)
+      <h1>Hello,{{$product->title}}!</h1> </h1>
+      @endforeach
       {{-- CARD-1 --}}
-       <div>
-         <a href="/product" class="space-y-3">
-           <div>
-             <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
-           </div>
-           <div class="text-sm space-y-1">
-             <h1>GHẾ GỖ</h1>
-             <p>3,500,000 VND</p>
-           </div>
-         </a>
-       </div>
-       {{-- CARD-2 --}}
-       <div class="space-y-3">
-          <div>
-            <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
-          </div>
-          <div class="text-sm space-y-1">
-            <h1>GHẾ GỖ</h1>
-            <p>3,500,000 VND</p>
-          </div>
-       </div>
-       {{-- CARD-3 --}}
-       <div class="space-y-3">
-        <div>
-          <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
-        </div>
-        <div class="text-sm space-y-1">
-          <h1>GHẾ GỖ</h1>
-          <p>3,500,000 VND</p>
-        </div>
-       </div>
-       {{-- CARD-4 --}}
-       <div class="space-y-3">
-        <div>
-          <img src="img/home-img/home-img-3.jpg" alt="" class="w-full">
-        </div>
-        <div class="text-sm space-y-1">
-          <h1>GHẾ GỖ</h1>
-          <p>3,500,000 VND</p>
-        </div>
-       </div>
+       {{-- <div>
+         @foreach($products as $product)
+          <a href="{{url('product/'.$product->id)}}" class="space-y-3">
+            <div class="w-[209px] h-[139px]">
+              <img src="{{asset('uploads/products-img/'.$product->thumbnail)}}" alt="" class="w-full">
+            </div>
+            <div class="text-sm space-y-1">
+              <h1>{{$product->title}}</h1>
+              <p>{{$product->price}}</p>
+            </div>
+          </a>
+         @endforeach
+       </div>        --}}
     </div>
     <div class="justify-end hidden md:flex">
       @include('user.layouts.sort')

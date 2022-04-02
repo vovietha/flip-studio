@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalog;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -13,8 +15,32 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        //
+        $catalogs = Catalog::all();
+        return view('user.shop', compact('catalogs'));
     }
+    public function viewcategory($id)
+    {
+        if(Catalog::where('id', $id)->exists())
+        {
+            $catalogs = Catalog::all('id', $id);
+            $products = Product::all('catalog_id', $catalogs->id);
+            return view('user.shop',compact('catalogs','products'));
+        }
+        else 
+        {
+            return redirect()->back();
+        }
+    }
+    // public function catalogs()
+    // {
+    //     $catalogs = Catalog::all();
+    //     return view('user.shop.allIndex', compact('catalogs'));
+    // }
+    // public function armchairs()
+    // {
+    //     $catalogs = Catalog::where('name','armchairs')->get();
+    //     return view('user.shop', compact('catalogs'));
+    // }
 
     /**
      * Show the form for creating a new resource.
