@@ -20,6 +20,24 @@ class FrontendController extends Controller
         $products = Product::where('catalog_id', $catalog->id)->get();
         return view('user.shop',compact('catalog','products'));   
     }
+    public function viewproducts($cate_slug, $prod_title) 
+    {
+        if (Catalog::where('slug',$cate_slug)->exists())
+        {
+            if (Product::where('title',$prod_title)->exists())
+            {
+                $products = Product::where('title',$prod_title)->first();
+                return view('user.detailProduct', compact('products'));
+            } else {
+                return redirect('shop');
+            }
+        } else {
+            return redirect('shop');
+        }
+        // $catalog = Catalog::where('slug', $slug)->firstOrFail();
+        // $products = Product::where('catalog_id', $catalog->id)->get();
+        // return view('user.detailProduct',compact('catalog','products'));   
+    }
     // public function catalogs()
     // {
     //     $catalogs = Catalog::all();

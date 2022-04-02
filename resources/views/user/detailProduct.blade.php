@@ -17,26 +17,30 @@
     {{-- INFORMATION PRODUCT --}}
     <div class="h-full pb-10">
       <div class="px-4 sm:px-7 md:px-9 lg:px-13 space-y-3 col-span-2 md:col-span-1 md:sticky top-14">
-        <h1 class="text-lg">GHẾ GỖ</h1>
-        <p class="text-lg">3,200,000 VND</p>
+        <h1 class="text-lg">{{$products->title}}</h1>
+        <p class="text-lg">${{$products->price}}</p>
         <div class="text-xs space-y-4">
           <p>PRODUCT INFORMATION</p>
           <div class="space-y-2">
-            <p>Dimensions: W1700 - D800 - H760 mm</p>
-            <p>Fabric: Gỗ sồi tự nhiên + MDF chống ẩm</p>
+            <p>Dimensions:{{$products->details}}</p>
+            <p>Fabric:{{$products->description}}</p>
           </div>
           <div class="text-xs space-y-2">
+            <p>CODE: {{$products->sku}}</p>
+          </div>
+          {{-- <div class="text-xs space-y-2">
             <p>TAG: </p>
             <div class="space-y-2">
-              <a href="#">Living room</a>,
               <a href="#">Sofa</a>
             </div>
-          </div>
-          {{-- COLOR --}}
+          </div> --}}
+          {{-- AVAILABLE --}}
           <div class="space-y-2" >
-            <p>COLOR</p>
-            <div class="rounded-full bg-black w-10 h-10">
-            </div>
+            @if($products->stock > 0)
+              <p>IN STOCK</p>
+            @else
+              <p>OUT STOCK</p>
+            @endif
           </div>
           {{-- QUANTITY --}}
           <div class="space-y-2">

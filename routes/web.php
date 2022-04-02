@@ -48,16 +48,20 @@ Route::get('/about', function () {
 Route::get('/shipping', function () {
     return view('user.shipping');
 });
-
+//SHOP
 Route::get('shop/{slug}', [FrontendController::class,"viewcategory"])->name('shop');
+// Route::get('product/{slug}', [FrontendController::class,"viewproducts"])->name('products');
+// DETAIL PRODUCT
+Route::get('shop/{cate_slug}/{prod_title}', [FrontendController::class,"viewproducts"]);
+
 
 
 Route::get('/all', function () {
     return view('user.layouts.list-item');
 });
-Route::get('/product', function () {
-    return view('user.detailProduct');
-});
+// Route::get('/product', function () {
+//     return view('user.detailProduct');
+// });
 
 
 

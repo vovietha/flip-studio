@@ -14,7 +14,8 @@
       {{-- CARD-1 --}}
        <div>
          @foreach($products as $product)
-          <a href="{{url('product/'.$product->id)}}" class="space-y-3">
+         <a href="{{url('shop/'.$catalog->slug.'/'.$product->title)}}" class="space-y-3">
+          {{-- <a href="{{url('product/'.$product->id)}}" class="space-y-3"> --}}
             <div class="w-[209px] h-[139px]">
               <img src="{{asset('uploads/products-img/'.$product->thumbnail)}}" alt="" class="w-full">
             </div>
