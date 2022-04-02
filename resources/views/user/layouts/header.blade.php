@@ -16,7 +16,7 @@
       {{-- PRIMARY NAV --}}
       <div class="hidden md:flex space-x-3 text-sm">
         <a href="/collections" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('collections') ? 'active' : ''}}">COLLECTIONS</a>
-        <a href="/shop" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop') ? 'active' : ''}}">SHOP</a>
+        <a href="/shop/all-products" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop/all') ? 'active' : ''}}">SHOP</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
       </div>
       {{-- SECONDARY NAV --}}
@@ -67,7 +67,7 @@
     </button>
     @auth
     <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
-    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
+    <a href="/shop/all-products" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
     <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
     <div class="group block py-2 px-4 text-sm hover:bg-gray-200">
       <div class="group-hover:flex flex-col md:relative block hover:bg-gray-200 {{request()->is('login') ? 'active' : ''}}">

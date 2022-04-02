@@ -13,23 +13,12 @@ class FrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function viewcategory($slug)
     {
-        $catalogs = Catalog::all();
-        return view('user.shop', compact('catalogs'));
-    }
-    public function viewcategory($id)
-    {
-        if(Catalog::where('id', $id)->exists())
-        {
-            $catalogs = Catalog::all('id', $id);
-            $products = Product::all('catalog_id', $catalogs->id);
-            return view('user.shop',compact('catalogs','products'));
-        }
-        else 
-        {
-            return redirect()->back();
-        }
+        $catalog = Catalog::where('slug', $slug)->firstOrFail();
+        $products = Product::where('catalog_id', $catalog->id)->get();
+        return view('user.shop',compact('catalog','products'));   
     }
     // public function catalogs()
     // {

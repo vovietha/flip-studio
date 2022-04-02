@@ -508,21 +508,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
 .my-\[100px\] {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .my-\[20px\] {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 .mb-\[20px\] {
   margin-bottom: 20px;
@@ -629,6 +625,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[40px\] {
   height: 40px;
 }
+.h-\[139px\] {
+  height: 139px;
+}
 .h-10 {
   height: 2.5rem;
 }
@@ -640,12 +639,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-4 {
   height: 1rem;
-}
-.h-\[1\] {
-  height: 1;
-}
-.h-\[139px\] {
-  height: 139px;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -671,6 +664,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[209px\] {
+  width: 209px;
+}
 .w-\[229px\] {
   width: 229px;
 }
@@ -685,12 +681,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4 {
   width: 1rem;
-}
-.w-\[\] {
-  width: ;
-}
-.w-\[209px\] {
-  width: 209px;
 }
 .min-w-full {
   min-width: 100%;
@@ -944,14 +934,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-6 {
   padding: 1.5rem;
 }
+.p-0 {
+  padding: 0px;
+}
 .p-\[12px\] {
   padding: 12px;
 }
 .p-\[10px\] {
   padding: 10px;
-}
-.p-0 {
-  padding: 0px;
 }
 .p-5 {
   padding: 1.25rem;

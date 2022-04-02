@@ -48,8 +48,8 @@ Route::get('/about', function () {
 Route::get('/shipping', function () {
     return view('user.shipping');
 });
-Route::get('/shop', [FrontendController::class,"index"]);
-Route::get('shop/{id}', [FrontendController::class,"viewcategory"]);
+
+Route::get('shop/{slug}', [FrontendController::class,"viewcategory"])->name('shop');
 
 
 Route::get('/all', function () {

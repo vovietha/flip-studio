@@ -2,8 +2,8 @@
   <h1 class="font-medium text-md">ALL CATEGORIES</h1>
   <div>
     <div class="flex flex-col space-y-3 text-sm">
-      @foreach($catalogs as $catalog)  
-        <a href="{{url('shop/'.$catalog->id)}}" class="hover:underline {{request()->is('all') ? 'active' : ''}}">{{$catalog->name}}</a>
+      @foreach(App\Models\Catalog::all() as $catalog)  
+        <a href="{{route('shop',$catalog->slug)}}" class="hover:underline {{request()->is($catalog->slug) ? 'active' : ''}}">{{$catalog->name}}</a>
       @endforeach
       {{-- <a href="/shop/{name}" class="hover:underline {{request()->is('armchairs/*') ? 'active' : ''}}">ARMCHAIRS</a>
       <a href="/loveseats/*" class="hover:underline {{request()->is('loveseats/*') ? 'active' : ''}}">LOVESEAT</a>
