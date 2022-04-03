@@ -1,7 +1,7 @@
 @extends('user.layouts.app')
 @section('title', 'Bag')
 @section('content')
-  <div class="px-5 md:px-0">
+  <div class="px-5 md:px-0" id="product_data">
     <h1 class="text-center py-5">CART</h1>
     <div class="flex flex-col md:flex-row">
       {{-- ITEMS --}}
@@ -16,28 +16,33 @@
             <th class="p-[12px] font-medium">SUBTOTAL</th>
           </thead>
           <tbody>
+            @foreach($cartItems as $cartItem)
             <tr class="border-b-[1px]">
-              <td class="p-[12px] w-[200px] "><a href=""><img src="img/home-img/home-img-3.jpg" alt=""></a></td>
-              <td class="p-[12px] font-thin text-center">
-                <a href="">GHẾ GỖ</a>
-                <p></p>
-                <p></p>
+              <td class="p-[12px] w-[200px] ">
+                <a href="#"><img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" height="70px" width="70px" alt=""></a>
               </td>
-              <td class="p-[12px] font-thin text-center">3.600.000 VND</td>
+              <td class="p-[12px] font-thin text-center">
+                <a href="">{{$cartItem->products->title}}</a>
+              </td>
+              <td class="p-[12px] font-thin text-center">${{$cartItem->products->price}}</td>
               <td class="p-[12px] h-full">
-                <form class="cart-form-button flex justify-center items-center h-full">
-                  <div class="cart-value-button" id="cart-button-decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                  <input type="number" class="h-[40px]" id="cart-input-number" value="0" />
-                  <div class="cart-value-button" id="cart-button-increase" onclick="increaseValue()" value="Increase Value">+</div>
-                </form>
+                <input type="hidden" value="{{$cartItem->product_id}}" id="product_id">
+                <div class="cart-form-button flex justify-center items-center h-full">
+                  <button type="button" class="cart-value-button" id="cart-button-decrease">-</button>
+                  <input type="number" class="h-[40px]" id="cart-input-number" value="{{$cartItem->product_qty}}" />
+                  <button type="button" class="cart-value-button" id="cart-button-increase">+</button>
+                </div>
               </td>
               <td class="p-[12px] font-thin text-center">3,600,000 VND</td>
               <td class="p-[12px] text-center">
-                <span class="material-icons">
-                  highlight_off
-                  </span>              
+                <button id="delete-cart-item">
+                  <span class="material-icons">
+                    highlight_off
+                    </span>              
+                </button>
               </td>
             </tr>
+            @endforeach
           </tbody>
         </table>
         <div class="flex p-[12px]  space-x-5 md:space-x-10">

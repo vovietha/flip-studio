@@ -2,6 +2,7 @@
 
 use App\Models\Catalog;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
@@ -62,6 +63,13 @@ Route::get('/all', function () {
 // Route::get('/product', function () {
 //     return view('user.detailProduct');
 // });
+
+Route::post('add-to-cart',[CartController::class,'addProduct']);
+Route::post('delete-cart-item',[CartController::class,'deleteproduct']);
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('cart',[CartController::class,'viewcart']);
+});
 
 
 

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{-- CSRF TOKEN --}}
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   {{-- CAROUSEL CSS --}}
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   {{-- CSS --}}
@@ -27,6 +29,7 @@
   {{-- CAROUSEL --}}
   {{-- APP JS --}}
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{mix('js/cart-value-button.js')}}"></script>
   <script src="{{mix('js/app.js')}}"></script>
   <script src="{{mix('js/swiper.js')}}"></script>

@@ -41,6 +41,7 @@ class CatalogController extends Controller
         $catalogs = new Catalog;
         $catalogs->name = $request->input('name');
         $catalogs->detail = $request->input('detail');
+        $catalogs->slug = $request->input('slug');
         $catalogs->save();
         return redirect()->back()->with('status','Catalog added successfully');
 

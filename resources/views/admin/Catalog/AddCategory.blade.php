@@ -19,6 +19,10 @@
           <input type="text" name="name" id="name" class="border border-[#ccc] h-[35px] text-[16px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5">
         </div>
         <div class="flex flex-col space-y-3 ">
+          <label for="slug" class="text-xs">SLUG: </label>
+          <input type="text" name="slug" id="slug" class="border border-[#ccc] h-[35px] text-[16px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5">
+        </div>
+        <div class="flex flex-col space-y-3 ">
           <label for="detail" class="text-xs">DETAIL: </label>
           <input type="text" name="detail" id="detail" class="border border-[#ccc] h-[35px] text-[16px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5">
         </div>

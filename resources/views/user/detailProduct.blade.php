@@ -1,14 +1,10 @@
 @extends('user.layouts.app')
 @section('title', 'DETAIL')
 @section('content')
-  <div class="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-5 space-y-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-5 space-y-10" id="product_data">
     {{-- IMG PRODUCT DESKTOP --}}
     <div class="space-y-10 hidden md:block md:col-span-1 ">
-      <img src="img/detail product-img/104149-ghe-an-albert-mau-coffee.jpeg" alt="">
-      <img src="img/detail product-img/104149-ghe-an-albert-mau-coffee-2.jpeg" alt="">
-      <img src="img/detail product-img/104149-ghe-an-albert-mau-coffee-3.jpeg" alt="">
-      <img src="img/detail product-img/104149-ghe-an-albert-mau-coffee-4.jpeg" alt="">
-      <img src="img/detail product-img/104149-ghe-an-albert-mau-coffee-5.jpeg" alt="">
+      <img src="{{asset('uploads/products-img/'.$products->thumbnail)}}" alt="">
     </div>
     {{-- IMG PRODUCT MOBILE --}}
     <div class="col-span-2 md:hidden">
@@ -37,13 +33,14 @@
           {{-- AVAILABLE --}}
           <div class="space-y-2" >
             @if($products->stock > 0)
-              <p>IN STOCK</p>
+              <label>IN STOCK</label>
             @else
-              <p>OUT STOCK</p>
+              <label>OUT OF STOCK</label>
             @endif
           </div>
           {{-- QUANTITY --}}
           <div class="space-y-2">
+            <input type="hidden" value="{{$products->id}}" id="product_id">
             <p>QUANTITY</p>
             <div class="cart-form-button flex justify-start items-center h-full">
               <button type="button" class="cart-value-button" id="cart-button-decrease" value="Decrease Value">-</button>
@@ -52,7 +49,11 @@
             </div>
           </div>
           <div class="space-y-3">
-            <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="ADD TO CART">
+            {{-- @if($products->stock > 0) --}}
+              <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="ADD TO CART" id="addToCartBtn">
+            {{-- @else
+              <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="OUT OF STOCK" disabled>
+            @endif --}}
             <input type="submit" class="w-full h-8 transition-all hover:bg-[#323232] duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW">
           </div>
         </div>

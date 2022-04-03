@@ -38,7 +38,3 @@ refineCloseMenuBtn.addEventListener('click', () => {
   refineMenu.classList.toggle('hidden')
 })
 // ADMIN -> CATALOG -> SELECT
-
-
-
-
