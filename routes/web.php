@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
@@ -97,6 +98,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
         'catalogs' => CatalogController::class,
         'products' => ProductController::class,
         'accounts' => AccountController::class,
+        'orders' => OrderController::class,
     ]);
     Route::get('/', function() {
         return view('admin.auth.login');
@@ -107,10 +109,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::get('/dashboard', function() {
         return view('admin.dashboard');
     })->name('dashboard')->middleware('isAdmin');
-    // PARAMETER SET
-    Route::get('/parameter-sets', function() {
-        return view('admin.parameterSet');
-    });
+
     Route::get('/collections', function() {
         return view('admin.collection');
     });

@@ -7,7 +7,7 @@
     <p class="text-md text-[#ccc]">Welcome back!</p>
   </div>
   <div>
-
+    
   </div>
 </div>
 @endsection

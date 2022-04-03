@@ -28,8 +28,8 @@
       </a>
     </div>
     <div class="flex justify-center md:justify-start">
-      <a href="/admin/parameter-sets" class="{{request()->is('admin/parameter-sets') ? 'active' : ''}} hidden md:block">PARAMETER SETS</a>
-      <a href="/admin/parameter-sets" class="block md:hidden {{request()->is('admin/parameter-sets') ? 'mobile-active' : ''}}">
+      <a href="{{route('admin.orders.index')}}" class="{{request()->is('admin/order') ? 'active' : ''}} hidden md:block">ORDER</a>
+      <a href="{{route('admin.orders.index')}}" class="block md:hidden {{request()->is('admin/order') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/tune_black_24dp.svg" alt="">
       </a>
     </div>
