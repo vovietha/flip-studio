@@ -73,6 +73,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('cart',[CartController::class,'viewcart'])->name('viewcart');
     Route::get('/cart/checkout',[CheckoutController::class,'index'])->name('checkout');
     Route::post('place-order',[CheckoutController::class,'placeorder'])->name('placeOrder');
+    Route::get('/ordered-history',[UserController::class,'index'])->name('ordered-history');
 });
 
 
@@ -81,9 +82,9 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/profile', function () {
     return view('user.profile');
 })->middleware('auth');
-Route::get('/ordered-history', function () {
-    return view('user.orderedHistory');
-})->middleware('auth');
+// Route::get('/ordered-history', function () {
+//     return view('user.orderedHistory');
+// })->middleware('auth');
 //CUSTOMER LOGIN
 Route::post('/register', [UserController::class,"register"])->name("register");
 Route::post('/login', [LoginController::class,"authenticate"])->name("login");

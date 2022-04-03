@@ -31,7 +31,7 @@
               <span class="material-icons">perm_identity</span>
             </div>
             <div class="flex justify-between space-x-2">
-              <a href="/ordered-history" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
+              <a href="{{route('ordered-history')}}" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
               <span class="material-icons">list_alt</span>
             </div>
             <div class="flex justify-between space-x-2">
