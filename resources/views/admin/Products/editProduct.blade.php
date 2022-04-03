@@ -21,6 +21,21 @@
               @endforeach
           </select>
         </div> --}}
+        {{-- <form method="GET">
+          @csrf
+          <select  name="category" id="category" class="form-control border-solid border-[1px] py-2 px-3">
+            <option>. . .</option>
+              @foreach($catalogs as $catalog)
+                <option 
+                  value="{{$catalog->id}}" 
+                  @if(request()->query('category') == $catalog->id) selected @endif
+                >
+                  {{$catalog->name}}
+                </option>
+              @endforeach
+          </select>
+          <button type="submit" class="py-2 px-3 border-solid border-[1px]">Select</button>
+        </form> --}}
         <div class="flex flex-col space-y-3 ">
           <label for="title" class="text-xs">TITLE: </label>
           <input type="text" name="title" id="title" placeholder="{{$products->title}}" class="border border-[#ccc] h-[35px] text-[16px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5">

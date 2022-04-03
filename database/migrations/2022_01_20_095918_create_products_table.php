@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->foreign('catalog_id')->references('id')->on('catalogs');
             $table->string('title');
             $table->text('description');
-            $table->string('price');
+            $table->integer('price');
             $table->longText('details');
             $table->string('thumbnail');
             $table->string('sku');

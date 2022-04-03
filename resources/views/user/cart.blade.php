@@ -31,7 +31,7 @@
               {{-- QUANTITY --}}
               <td class="p-[12px] h-full text-center">
                 <input type="hidden" value="{{$cartItem->product_id}}" id="product_id">
-                @if ($cartItem->products->product_qty > $cartItem->product_qty)
+                @if ($cartItem->products->stock >= $cartItem->product_qty)
                   <div class="cart-form-button flex justify-center items-center h-full">
                     <button type="button" class="cart-value-button changeQuantity" id="cart-button-decrease">-</button>
                     <input type="number" class="h-[40px]" id="cart-input-number" value="{{$cartItem->product_qty}}" />
