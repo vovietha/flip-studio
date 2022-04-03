@@ -16,7 +16,7 @@
             <th class="p-[12px] font-medium">SUBTOTAL</th>
           </thead>
           <tbody>
-            @php $total = 0; @endphp
+            @php $totalPrice = 0; @endphp
             @foreach($cartItems as $cartItem)
             <tr class="border-b-[1px]">
               <td class="p-[12px] w-[200px] ">
@@ -36,7 +36,7 @@
                 </div>
               </td>
               {{--  --}}
-              <td class="p-[12px] font-thin text-center">3,600,000 VND</td>
+              <td class="p-[12px] font-thin text-center">${{$totalPrice}}</td>
               <td class="p-[12px] text-center">
                 <button id="delete-cart-item">
                   <span class="material-icons">
@@ -45,7 +45,7 @@
                 </button>
               </td>
             </tr>
-            @php $total += $cartItem->products->price * $cartItem->product_qty; @endphp
+            @php $totalPrice += $cartItem->products->price * $cartItem->product_qty; @endphp
             @endforeach
           </tbody>
         </table>
@@ -61,7 +61,7 @@
           <div class="py-[10px] px-[20px] md:px-[25px]">
             <div class="flex justify-between py-[20px] font-thin">
               <p class="text-sm md:text-md">SUBTOTAL</p>
-              <p class="text-sm md:text-md">4,160,000 VND</p>
+              <p class="text-sm md:text-md">${{$totalPrice}}</p>
             </div>
             <div class="flex justify-between border-y-[1px] py-[20px] font-thin">
               <p class="text-sm md:text-md">SHIPPING</p>
@@ -69,11 +69,11 @@
             </div>
             <div class="flex justify-between py-[20px] font-thin">
               <p class="text-sm md:text-md">TOTAL</p>
-              <p class="text-sm md:text-md">${{$total}}</p>
+              <p class="text-sm md:text-md">${{$totalPrice}}</p>
             </div>
             <div class="py-10">
               <span class="w-full p-[10px] bg-black text-white flex items-center transition-all hover:bg-[#323232] duration-200">
-                <a href="" class="w-full items-center text-center tracking-widest">PROCEED TO CHECKOUT</a>
+                <a href="{{route('checkout')}}" class="w-full items-center text-center tracking-widest">PROCEED TO CHECKOUT</a>
               </span>
             </div>
           </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Admin\LoginController as AdminLoginController;
 
@@ -69,7 +70,8 @@ Route::post('delete-cart-item',[CartController::class,'deleteproduct']);
 Route::post('update-cart', [CartController::class,'updatecart']);
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('cart',[CartController::class,'viewcart']);
+    Route::get('cart',[CartController::class,'viewcart'])->name('viewcart');
+    Route::get('/cart/checkout',[CheckoutController::class,'index'])->name('checkout');
 });
 
 

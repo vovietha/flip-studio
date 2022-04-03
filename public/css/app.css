@@ -592,6 +592,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.inline-flex {
+  display: inline-flex;
+}
 .table {
   display: table;
 }
@@ -682,6 +685,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-4 {
   width: 1rem;
 }
+.w-\[300px\] {
+  width: 300px;
+}
+.w-\[500px\] {
+  width: 500px;
+}
+.w-1\/4 {
+  width: 25%;
+}
 .min-w-full {
   min-width: 100%;
 }
@@ -693,6 +705,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.max-w-lg {
+  max-width: 32rem;
 }
 .flex-none {
   flex: none;
@@ -1487,6 +1502,18 @@ body {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
   }
 
   .md\:max-w-3xl {
