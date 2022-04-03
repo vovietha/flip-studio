@@ -25,7 +25,7 @@ class UserController extends Controller
     }
     public function profile()
     {
-        $users = User::where('user_id', Auth::id())->get();
+        $users = User::where('id', Auth::id())->get();
         return view('user.profile', compact('users'));
     }
 }

@@ -74,14 +74,15 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/cart/checkout',[CheckoutController::class,'index'])->name('checkout');
     Route::post('place-order',[CheckoutController::class,'placeorder'])->name('placeOrder');
     Route::get('/ordered-history',[UserController::class,'index'])->name('ordered-history');
+    Route::get('profile', [UserController::class,'profile'])->name('profile');
 });
 
 
 
 //LOGGED IN VIEWS 
-Route::get('/profile', function () {
-    return view('user.profile');
-})->middleware('auth');
+// Route::get('/profile', function () {
+//     return view('user.profile');
+// })->middleware('auth');
 // Route::get('/ordered-history', function () {
 //     return view('user.orderedHistory');
 // })->middleware('auth');
