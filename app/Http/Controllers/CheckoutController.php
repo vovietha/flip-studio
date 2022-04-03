@@ -39,6 +39,16 @@ class CheckoutController extends Controller
         $order->state = $request->input('state');
         $order->country = $request->input('country');
         $order->pincode = $request->input('pincode');
+
+        //calculate the total price
+        $total = 0;
+        $cartItems_total = Cart::where('user_id', Auth::id())->get();
+        foreach ($cartItems_total as $prod)
+        {
+            $total += $prod->products->price;
+        }
+        $order->total_price = $total;
+        
         $order->note = $request->input('note');
         $order->tracking_number = 'FS'.rand(1111,9999);
         $order->save();

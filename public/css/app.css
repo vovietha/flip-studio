@@ -520,6 +520,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
@@ -631,9 +635,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[139px\] {
   height: 139px;
 }
-.h-10 {
-  height: 2.5rem;
-}
 .h-\[32px\] {
   height: 32px;
 }
@@ -667,14 +668,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[200px\] {
   width: 200px;
 }
+.w-\[100px\] {
+  width: 100px;
+}
 .w-\[209px\] {
   width: 209px;
 }
 .w-\[229px\] {
   width: 229px;
-}
-.w-10 {
-  width: 2.5rem;
 }
 .w-\[50px\] {
   width: 50px;
@@ -684,18 +685,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-4 {
   width: 1rem;
-}
-.w-\[300px\] {
-  width: 300px;
-}
-.w-\[500px\] {
-  width: 500px;
-}
-.w-1\/4 {
-  width: 25%;
-}
-.w-\[100px\] {
-  width: 100px;
 }
 .min-w-full {
   min-width: 100%;
@@ -708,9 +697,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-6xl {
   max-width: 72rem;
-}
-.max-w-lg {
-  max-width: 32rem;
 }
 .flex-none {
   flex: none;
@@ -955,14 +941,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-0 {
   padding: 0px;
 }
+.p-5 {
+  padding: 1.25rem;
+}
 .p-\[12px\] {
   padding: 12px;
 }
 .p-\[10px\] {
   padding: 10px;
-}
-.p-5 {
-  padding: 1.25rem;
 }
 .p-4 {
   padding: 1rem;
@@ -1046,6 +1032,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[52px\] {
   padding-top: 52px;
   padding-bottom: 52px;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -1509,10 +1499,6 @@ body {
 
   .md\:w-3\/4 {
     width: 75%;
-  }
-
-  .md\:w-1\/4 {
-    width: 25%;
   }
 
   .md\:w-2\/5 {

@@ -51,33 +51,39 @@
         {{-- ORDER INFORMATION --}}
         <div  class="px-0 md:px-[20px] w-full md:w-2/5">
           <h1 class="mb-[12px] tracking-widest ">ORDER INFORMATION</h1>
-          @foreach($cartItems as $cartItem)
-          <div class="border-[1px] border-black">
-            <div class="p-5">
-              <div class="flex space-x-5 py-[10px] px-[20px] md:px-[25px] border-solid border-b-[1px]">
-                <img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" alt="" width="100px" height="100px">
-                <div class="flex flex-col justify-between">
-                  <p>{{$cartItem->products->title}}</p>
-                  <p>x{{$cartItem->product_qty}}</p>
+          @if($cartItems->count() > 0)  
+            <div>
+              @foreach($cartItems as $cartItem)
+              <div class="border-[1px] border-black">
+                <div class="p-5">
+                  <div class="flex space-x-5 py-[10px] px-[20px] md:px-[25px] border-solid border-b-[1px]">
+                    <img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" alt="" width="100px" height="100px">
+                    <div class="flex flex-col justify-between">
+                      <p>{{$cartItem->products->title}}</p>
+                      <p>x{{$cartItem->product_qty}}</p>
+                    </div>
+                  </div>
+                  <div class="py-[10px] px-[20px] md:px-[25px]">
+                    <div class="flex justify-between py-[20px] font-thin">
+                      <p class="text-sm md:text-md">SUBTOTAL</p>
+                      <p class="text-sm md:text-md">$0</p>
+                    </div>
+                    <div class="flex justify-between py-[20px] font-thin">
+                      <p class="text-sm md:text-md">SHIPPING</p>
+                      <p class="text-sm md:text-md">FREE</p>
+                    </div>
+                    <div class="flex justify-between py-[20px] font-thin">
+                      <p class="text-sm md:text-md">TOTAL</p>
+                      <p class="text-sm md:text-md">${{}}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="py-[10px] px-[20px] md:px-[25px]">
-                <div class="flex justify-between py-[20px] font-thin">
-                  <p class="text-sm md:text-md">SUBTOTAL</p>
-                  <p class="text-sm md:text-md">$0</p>
-                </div>
-                <div class="flex justify-between py-[20px] font-thin">
-                  <p class="text-sm md:text-md">SHIPPING</p>
-                  <p class="text-sm md:text-md">FREE</p>
-                </div>
-                <div class="flex justify-between py-[20px] font-thin">
-                  <p class="text-sm md:text-md">TOTAL</p>
-                  <p class="text-sm md:text-md">${{}}</p>
-                </div>
-              </div>
+              @endforeach
             </div>
-          </div>
-          @endforeach
+          @else
+            <h1>NO PRODUCT IN CART</h1>
+          @endif
         </div>
       </div>
     </form>
