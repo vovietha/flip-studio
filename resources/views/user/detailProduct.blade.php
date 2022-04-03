@@ -50,8 +50,8 @@
           </div>
           <div class="space-y-3">
             @if($products->stock > 0)
-              <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="ADD TO CART" id="addToCartBtn">
-              <input type="submit" class="w-full h-8 transition-all hover:bg-[#323232] duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW">
+              <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW" id="addToCartBtn">
+              {{-- <input type="submit" class="w-full h-8 transition-all hover:bg-[#323232] duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW"> --}}
             @else
               <button class="w-full h-8 border-solid border-[1px] transition-all duration-100 cursor-pointer bg-white text-black tracking-widest" disabled>
                 OUT OF STOCK
@@ -62,11 +62,11 @@
       </div>
     </div>
     {{-- RELATED PRODUCTS --}}
-    <div class="col-span-2 border-solid border-t-[1px] border-black space-y-10">
+    {{-- <div class="col-span-2 border-solid border-t-[1px] border-black space-y-10">
       <h1 class="text-lg tracking-widest text-center mt-10">YOU MAY ALSO LIKE</h1>
       <div>
         @include('user.layouts.relatedCarousel')
       </div>
-    </div>
+    </div> --}}
   </div>
 @endsection

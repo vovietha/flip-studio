@@ -18,7 +18,6 @@
         <div class="px-0 md:px-[20px] mb-10 md:mb-0 w-full md:w-3/4">
           <div class="flex justify-between mb-[12px]">
             <h1>DELIVERY INFORMATION</h1>
-            <a href="">LOGIN</a>
           </div>
           <div class="space-y-4 text-xs">
             <div>
@@ -46,13 +45,14 @@
               <textarea name="note" id="" cols="30" rows="10" placeholder="NOTES" class="border border-[#ccc] h-[35px] text-[12px] mb-[20px] md:m-0 focus:outline-black focus:invalid:border-red w-full p-2 md:p-5"></textarea>
             </div>
             <button type="submit" class="w-full h-8 bg-black text-white">PLACE ORDER</button>
-          </form>
         </div>
+      </div>
         {{-- ORDER INFORMATION --}}
         <div  class="px-0 md:px-[20px] w-full md:w-2/5">
           <h1 class="mb-[12px] tracking-widest ">ORDER INFORMATION</h1>
           @if($cartItems->count() > 0)  
             <div>
+              @php $totalPrice = 0; @endphp
               @foreach($cartItems as $cartItem)
               <div class="border-[1px] border-black">
                 <div class="p-5">
@@ -72,9 +72,10 @@
                       <p class="text-sm md:text-md">SHIPPING</p>
                       <p class="text-sm md:text-md">FREE</p>
                     </div>
+                    @php $totalPrice += $cartItem->products->price * $cartItem->product_qty; @endphp
                     <div class="flex justify-between py-[20px] font-thin">
                       <p class="text-sm md:text-md">TOTAL</p>
-                      <p class="text-sm md:text-md">${{}}</p>
+                      <p class="text-sm md:text-md">${{$totalPrice}}</p>
                     </div>
                   </div>
                 </div>

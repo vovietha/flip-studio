@@ -12,8 +12,8 @@
     </div>
     <div class="grid grid-cols-1 col-span-1 sm:grid-cols-2 sm:col-span-1  md:col-span-4 md:grid-cols-4 gap-5 my-[100px] md:my-0 ">
       {{-- CARD-1 --}}
+      @foreach($products as $product)
        <div>
-         @foreach($products as $product)
          <a href="{{url('shop/'.$catalog->slug.'/'.$product->title)}}" class="space-y-3">
           {{-- <a href="{{url('product/'.$product->id)}}" class="space-y-3"> --}}
             <div class="w-[209px] h-[139px]">
@@ -24,8 +24,8 @@
               <p>{{$product->price}}</p>
             </div>
           </a>
-         @endforeach
-       </div>       
+        </div>       
+        @endforeach
     </div>
     <div class="justify-end hidden md:flex">
       @include('user.layouts.sort')
