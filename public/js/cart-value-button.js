@@ -94,6 +94,30 @@ $(document).ready(function () {
       }
     });
   });
+  $('.changeQuantity').click(function (e) {
+    e.preventDefault(); // AJAX SETUP
+
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    var product_id = $(this).closest('#product_data').find('#product_id').val();
+    var qty = $(this).closest('#product_data').find('#cart-input-number').val();
+    data = {
+      'product_id': product_id,
+      'product_qty': qty
+    }; // AJAX
+
+    $.ajax({
+      method: 'POST',
+      url: 'update-cart',
+      data: data,
+      success: function success(response) {
+        window.location.reload();
+      }
+    });
+  });
 });
 /******/ })()
 ;

@@ -16,23 +16,26 @@
             <th class="p-[12px] font-medium">SUBTOTAL</th>
           </thead>
           <tbody>
+            @php $total = 0; @endphp
             @foreach($cartItems as $cartItem)
             <tr class="border-b-[1px]">
               <td class="p-[12px] w-[200px] ">
-                <a href="#"><img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" height="70px" width="70px" alt=""></a>
+                <a href=""><img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" height="70px" width="70px" alt=""></a>
               </td>
               <td class="p-[12px] font-thin text-center">
                 <a href="">{{$cartItem->products->title}}</a>
               </td>
               <td class="p-[12px] font-thin text-center">${{$cartItem->products->price}}</td>
+              {{-- QUANTITY --}}
               <td class="p-[12px] h-full">
                 <input type="hidden" value="{{$cartItem->product_id}}" id="product_id">
                 <div class="cart-form-button flex justify-center items-center h-full">
-                  <button type="button" class="cart-value-button" id="cart-button-decrease">-</button>
+                  <button type="button" class="cart-value-button changeQuantity" id="cart-button-decrease">-</button>
                   <input type="number" class="h-[40px]" id="cart-input-number" value="{{$cartItem->product_qty}}" />
-                  <button type="button" class="cart-value-button" id="cart-button-increase">+</button>
+                  <button type="button" class="cart-value-button changeQuantity" id="cart-button-increase">+</button>
                 </div>
               </td>
+              {{--  --}}
               <td class="p-[12px] font-thin text-center">3,600,000 VND</td>
               <td class="p-[12px] text-center">
                 <button id="delete-cart-item">
@@ -42,6 +45,7 @@
                 </button>
               </td>
             </tr>
+            @php $total += $cartItem->products->price * $cartItem->product_qty; @endphp
             @endforeach
           </tbody>
         </table>
@@ -65,7 +69,7 @@
             </div>
             <div class="flex justify-between py-[20px] font-thin">
               <p class="text-sm md:text-md">TOTAL</p>
-              <p class="text-sm md:text-md">4,160,000 VND</p>
+              <p class="text-sm md:text-md">${{$total}}</p>
             </div>
             <div class="py-10">
               <span class="w-full p-[10px] bg-black text-white flex items-center transition-all hover:bg-[#323232] duration-200">

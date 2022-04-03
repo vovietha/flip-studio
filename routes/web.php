@@ -53,7 +53,7 @@ Route::get('/shipping', function () {
 Route::get('shop/{slug}', [FrontendController::class,"viewcategory"])->name('shop');
 // Route::get('product/{slug}', [FrontendController::class,"viewproducts"])->name('products');
 // DETAIL PRODUCT
-Route::get('shop/{cate_slug}/{prod_title}', [FrontendController::class,"viewproducts"]);
+Route::get('shop/{cate_slug}/{prod_title}', [FrontendController::class,"viewproducts"])->name('viewproducts');
 
 
 
@@ -66,6 +66,7 @@ Route::get('/all', function () {
 
 Route::post('add-to-cart',[CartController::class,'addProduct']);
 Route::post('delete-cart-item',[CartController::class,'deleteproduct']);
+Route::post('update-cart', [CartController::class,'updatecart']);
 
 Route::middleware(['auth'])->group(function(){
     Route::get('cart',[CartController::class,'viewcart']);
