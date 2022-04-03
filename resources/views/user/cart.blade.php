@@ -19,21 +19,31 @@
             @php $totalPrice = 0; @endphp
             @foreach($cartItems as $cartItem)
             <tr class="border-b-[1px]">
-              <td class="p-[12px] w-[200px] ">
-                <a href=""><img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" height="70px" width="70px" alt=""></a>
+              <td class="p-[12px] w-[200px]">
+                <div class="w-[100px] mx-auto">
+                  <img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" alt="">
+                </div>
               </td>
               <td class="p-[12px] font-thin text-center">
                 <a href="">{{$cartItem->products->title}}</a>
               </td>
               <td class="p-[12px] font-thin text-center">${{$cartItem->products->price}}</td>
               {{-- QUANTITY --}}
-              <td class="p-[12px] h-full">
+              <td class="p-[12px] h-full text-center">
                 <input type="hidden" value="{{$cartItem->product_id}}" id="product_id">
-                <div class="cart-form-button flex justify-center items-center h-full">
-                  <button type="button" class="cart-value-button changeQuantity" id="cart-button-decrease">-</button>
-                  <input type="number" class="h-[40px]" id="cart-input-number" value="{{$cartItem->product_qty}}" />
-                  <button type="button" class="cart-value-button changeQuantity" id="cart-button-increase">+</button>
-                </div>
+                @if ($cartItem->products->product_qty > $cartItem->product_qty)
+                  <div class="cart-form-button flex justify-center items-center h-full">
+                    <button type="button" class="cart-value-button changeQuantity" id="cart-button-decrease">-</button>
+                    <input type="number" class="h-[40px]" id="cart-input-number" value="{{$cartItem->product_qty}}" />
+                    <button type="button" class="cart-value-button changeQuantity" id="cart-button-increase">+</button>
+                  </div>
+                  @php $totalPrice += $cartItem->products->price * $cartItem->product_qty; @endphp
+                @else
+                  <div>
+                    <h5>OUT OF STOCK</h1>
+                  </div>
+                @endif
+
               </td>
               {{--  --}}
               <td class="p-[12px] font-thin text-center">${{$totalPrice}}</td>
@@ -45,7 +55,6 @@
                 </button>
               </td>
             </tr>
-            @php $totalPrice += $cartItem->products->price * $cartItem->product_qty; @endphp
             @endforeach
           </tbody>
         </table>

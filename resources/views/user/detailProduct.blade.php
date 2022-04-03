@@ -49,12 +49,14 @@
             </div>
           </div>
           <div class="space-y-3">
-            {{-- @if($products->stock > 0) --}}
+            @if($products->stock > 0)
               <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="ADD TO CART" id="addToCartBtn">
-            {{-- @else
-              <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="OUT OF STOCK" disabled>
-            @endif --}}
-            <input type="submit" class="w-full h-8 transition-all hover:bg-[#323232] duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW">
+              <input type="submit" class="w-full h-8 transition-all hover:bg-[#323232] duration-100 cursor-pointer bg-black text-white tracking-widest" value="BUY NOW">
+            @else
+              <button class="w-full h-8 border-solid border-[1px] transition-all duration-100 cursor-pointer bg-white text-black tracking-widest" disabled>
+                OUT OF STOCK
+              </button>
+            @endif
           </div>
         </div>
       </div>

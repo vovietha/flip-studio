@@ -694,6 +694,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-1\/4 {
   width: 25%;
 }
+.w-\[100px\] {
+  width: 100px;
+}
 .min-w-full {
   min-width: 100%;
 }
