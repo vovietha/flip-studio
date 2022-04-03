@@ -3,7 +3,7 @@
 @section('content')
 <div>
   <div>
-    <h1 class="font-bold text-2xl">HELLO, SONBILL</h1>
+    <h1 class="font-bold text-2xl">HELLO, {{$users->fname}}</h1>
     <p class="text-md text-[#ccc]">Welcome back!</p>
   </div>
   <div>

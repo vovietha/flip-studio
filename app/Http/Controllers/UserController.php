@@ -28,4 +28,9 @@ class UserController extends Controller
         $users = User::where('id', Auth::id())->get();
         return view('user.profile', compact('users'));
     }
+    public function dashboard()
+    {
+        $users = User::where('id', Auth::id())->first();
+        return view('admin.dashboard', compact('users'));
+    }
 }

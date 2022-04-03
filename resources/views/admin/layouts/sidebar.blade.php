@@ -21,12 +21,12 @@
         <img src="/img/dashboard-icon/shopping_basket_black_24dp.svg" alt="">
       </a>
     </div>
-    <div class="flex justify-center md:justify-start">
+    {{-- <div class="flex justify-center md:justify-start">
       <a href="/admin/collections" class="{{request()->is('admin/collections') ? 'active' : ''}} hidden md:block">COLLECTIONS</a>
       <a href="/admin/collections" class="block md:hidden {{request()->is('admin/collections') ? 'mobile-active' : ''}}">
         <img src="/img/dashboard-icon/collections_black_24dp.svg" alt="">
       </a>
-    </div>
+    </div> --}}
     <div class="flex justify-center md:justify-start">
       <a href="{{route('admin.orders.index')}}" class="{{request()->is('admin/order') ? 'active' : ''}} hidden md:block">ORDER</a>
       <a href="{{route('admin.orders.index')}}" class="block md:hidden {{request()->is('admin/order') ? 'mobile-active' : ''}}">

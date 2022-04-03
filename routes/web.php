@@ -106,13 +106,11 @@ Route::prefix('admin')->name('admin.')->group(function() {
     Route::post('/', [AdminLoginController::class,'authenticate'])->name('adminLogin');
     Route::get('/admin/logout', [AdminLoginController::class,"logout"])->name("logout");
 
-    Route::get('/dashboard', function() {
-        return view('admin.dashboard');
-    })->name('dashboard')->middleware('isAdmin');
+    Route::get('dashboard', [UserController::class,'dashboard'])->name('dashboard')->middleware('isAdmin');
 
-    Route::get('/collections', function() {
-        return view('admin.collection');
-    });
+    // Route::get('/collections', function() {
+    //     return view('admin.collection');
+    // });
     // Route::get('/accounts', function() {
     //     return view('admin.account');
     // });
