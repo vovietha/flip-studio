@@ -45,11 +45,11 @@
           {{-- QUANTITY --}}
           <div class="space-y-2">
             <p>QUANTITY</p>
-            <form class="cart-form-button flex justify-start items-center h-full">
-              <div class="cart-value-button" id="cart-button-decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-              <input type="number" class="h-[32px]" id="cart-input-number" value="0" />
-              <div class="cart-value-button" id="cart-button-increase" onclick="increaseValue()" value="Increase Value">+</div>
-            </form>
+            <div class="cart-form-button flex justify-start items-center h-full">
+              <button type="button" class="cart-value-button" id="cart-button-decrease" value="Decrease Value">-</button>
+              <input type="number" class="h-[32px]" id="cart-input-number" value="1" />
+              <button type="button" class="cart-value-button" id="cart-button-increase" value="Increase Value">+</button>
+            </div>
           </div>
           <div class="space-y-3">
             <input type="submit" class="w-full h-8 border-solid border-[1px] transition-all hover:bg-[#EEEE] duration-100 cursor-pointer bg-white text-black tracking-widest" value="ADD TO CART">
