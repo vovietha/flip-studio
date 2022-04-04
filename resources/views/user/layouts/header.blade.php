@@ -16,7 +16,7 @@
       {{-- PRIMARY NAV --}}
       <div class="hidden md:flex space-x-3 text-sm">
         <a href="/collections" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('collections') ? 'active' : ''}}">COLLECTIONS</a>
-        <a href="/shop" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop') ? 'active' : ''}}">SHOP</a>
+        <a href="/shop/all-products" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop/all') ? 'active' : ''}}">SHOP</a>
         <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
       </div>
       {{-- SECONDARY NAV --}}
@@ -26,12 +26,12 @@
           ACCOUNT
           <div class="group-hover:flex flex-col z-10 hidden bg-white absolute top-10 space-y-4 p-5">
             <div class="flex justify-between space-x-2">
-              <a href="/profile" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">
+              <a href="{{route('profile')}}" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900 transition duration-100 {{request()->is('profile') ? 'active' : ''}}">
                 PROFILE</a>
               <span class="material-icons">perm_identity</span>
             </div>
             <div class="flex justify-between space-x-2">
-              <a href="/ordered-history" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
+              <a href="{{route('ordered-history')}}" class="hover:underline flex items-center justify-between text-gray-500 whitespace-nowrap hover:text-gray-900  transition duration-100 {{request()->is('ordered-history') ? 'active' : ''}}">ORDER HISTORY</a>
               <span class="material-icons">list_alt</span>
             </div>
             <div class="flex justify-between space-x-2">
@@ -67,7 +67,7 @@
     </button>
     @auth
     <a href="/collections" class="block py-2 px-4 text-sm hover:bg-gray-200">COLLECTIONS</a>
-    <a href="/shop" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
+    <a href="/shop/all-products" class="block py-2 px-4 text-sm hover:bg-gray-200">SHOP</a>
     <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200">ABOUT</a>
     <div class="group block py-2 px-4 text-sm hover:bg-gray-200">
       <div class="group-hover:flex flex-col md:relative block hover:bg-gray-200 {{request()->is('login') ? 'active' : ''}}">

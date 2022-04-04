@@ -47,7 +47,7 @@ refineOpenMenuBtn.addEventListener('click', function () {
 });
 refineCloseMenuBtn.addEventListener('click', function () {
   refineMenu.classList.toggle('hidden');
-});
+}); // ADMIN -> CATALOG -> SELECT
 
 /***/ }),
 

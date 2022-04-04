@@ -13,9 +13,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  {{-- FONTAWESOME - ICON --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-  @yield('content')
+  <div class="flex min-h-screen">
+    <div>
+      @include('admin.layouts.sidebar')
+    </div>
+    <div class="max-w-7xl p-4 md:p-10 grow">
+      @yield('content')
+    </div>
+  </div>
 </body>
 </html>
