@@ -2,7 +2,7 @@
 @section('title', 'EDIT ACCOUNT')
 @section('content')
   <div>
-    <h1>EDIT ACCOUNT</h1>
+    <h1>EDIT PRODUCT</h1>
     <div class="min-w-full">
       <form action="{{route('admin.products.update',$products->id )}}" method="POST" ecctype="multipart/form-data" class="w-full space-y-4 py-5">
         @csrf
