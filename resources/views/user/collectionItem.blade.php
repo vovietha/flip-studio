@@ -40,12 +40,12 @@
       </div>
     </div>
     {{-- PRODUCTS --}}
-    <div class="space-y-10">
-      {{-- PRODUCT - CHAIR --}}
+    {{-- <div class="space-y-10">
+      PRODUCT - CHAIR
       <div class="max-w-7xl mx-auto">
         <h1 class="text-center">CHAIR</h1>
         <div class="flex items-center justify-center">
-          {{-- PRODUCT - ITEM - 1 --}}
+          PRODUCT - ITEM - 1
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -57,7 +57,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 2 --}}
+          PRODUCT - ITEM - 2
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -69,7 +69,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 3 --}}
+          PRODUCT - ITEM - 3
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -82,12 +82,12 @@
             </a>
           </div>
         </div>
-      </div>
-      {{-- PRODUCT - TABLE --}}
+      </div> --}}
+      {{-- PRODUCT - TABLE
       <div class="max-w-7xl mx-auto">
         <h1 class="text-center">TABLE</h1>
         <div class="flex items-center justify-center">
-          {{-- PRODUCT - ITEM - 1 --}}
+          PRODUCT - ITEM - 1
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -99,7 +99,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 2 --}}
+          PRODUCT - ITEM - 2
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -111,7 +111,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 3 --}}
+          PRODUCT - ITEM - 3
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -124,12 +124,12 @@
             </a>
           </div>
         </div>
-      </div>
-      {{-- PRODUCT - ARMCHAIR --}}
+      </div> --}}
+      {{-- PRODUCT - ARMCHAIR
       <div class="max-w-7xl mx-auto">
         <h1 class="text-center">ARMCHAIR</h1>
         <div class="flex items-center justify-center">
-          {{-- PRODUCT - ITEM - 1 --}}
+          PRODUCT - ITEM - 1
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -141,7 +141,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 2 --}}
+          PRODUCT - ITEM - 2
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -153,7 +153,7 @@
               </div>
             </a>
           </div>
-          {{-- PRODUCT - ITEM - 3 --}}
+          PRODUCT - ITEM - 3
           <div class="">
             <a href="">
               <div class="w-[200px]">
@@ -166,7 +166,7 @@
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </div> --}}
+    {{-- </div> --}}
   </div>
 @endsection

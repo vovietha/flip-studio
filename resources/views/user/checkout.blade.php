@@ -54,7 +54,7 @@
             <div>
               @php $totalPrice = 0; @endphp
               @foreach($cartItems as $cartItem)
-              <div class="border-[1px] border-black">
+              <div class="border-[1px] border-black mb-7">
                 <div class="p-5">
                   <div class="flex space-x-5 py-[10px] px-[20px] md:px-[25px] border-solid border-b-[1px]">
                     <img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" alt="" width="100px" height="100px">
@@ -63,27 +63,38 @@
                       <p>x{{$cartItem->product_qty}}</p>
                     </div>
                   </div>
-                  <div class="py-[10px] px-[20px] md:px-[25px]">
-                    <div class="flex justify-between py-[20px] font-thin">
-                      <p class="text-sm md:text-md">SUBTOTAL</p>
-                      <p class="text-sm md:text-md">$0</p>
-                    </div>
-                    <div class="flex justify-between py-[20px] font-thin">
-                      <p class="text-sm md:text-md">SHIPPING</p>
-                      <p class="text-sm md:text-md">FREE</p>
-                    </div>
                     @php $totalPrice += $cartItem->products->price * $cartItem->product_qty; @endphp
-                    <div class="flex justify-between py-[20px] font-thin">
-                      <p class="text-sm md:text-md">TOTAL</p>
-                      <p class="text-sm md:text-md">${{$totalPrice}}</p>
+                    <div class="py-[10px] px-[20px] md:px-[25px]">
+                      <div class="flex justify-between py-[20px] font-thin">
+                        <p class="text-sm md:text-md">SUBTOTAL</p>
+                        <p class="text-sm md:text-md">$0</p>
+                      </div>
+                      <div class="flex justify-between py-[20px] font-thin">
+                        <p class="text-sm md:text-md">SHIPPING</p>
+                        <p class="text-sm md:text-md">FREE</p>
+                      </div>
+                      <div class="flex justify-between py-[20px] font-thin">
+                        <p class="text-sm md:text-md">PRICE</p>
+                        <p class="text-sm md:text-md">{{$cartItem->products->price}}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              @endforeach
+                @endforeach
+                <div class="flex justify-between py-[20px] font-thin">
+                  <p class="text-sm md:text-md">TOTAL</p>
+                  <p class="text-sm md:text-md">${{$totalPrice}}</p>
+                </div>
             </div>
           @else
-            <h1>NO PRODUCT IN CART</h1>
+          <div class="flex items-center space-x-3">
+            <h1>NO PRODUCT IN CART </h1>
+            <div>
+              <span class="material-icons">
+              shopping_basket
+              </span>
+            </div>
+          </div>
           @endif
         </div>
       </div>

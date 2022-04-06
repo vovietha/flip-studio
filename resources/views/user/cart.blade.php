@@ -23,7 +23,7 @@
               <tr class="border-b-[1px]">
                 <td class="p-[12px] w-[200px]">
                   <div class="w-[100px] mx-auto">
-                    <img src="{{asset('uploads/products-img/'.$cartItem->products->thumbnail)}}" alt="">
+                    <img src="{{asset('uploads/products-img/'.optional($cartItem->products)->thumbnail)}}" alt="">
                   </div>
                 </td>
                 <td class="p-[12px] font-thin text-center">
@@ -60,10 +60,10 @@
               @endforeach
             </tbody>
           </table>
-          <div class="flex p-[12px]  space-x-5 md:space-x-10">
+          {{-- <div class="flex p-[12px]  space-x-5 md:space-x-10">
             <button class="hover:underline font-thin">CLEAR CART</button>
             <button class="hover:underline font-thin">UPDATE CART</button>
-          </div>
+          </div> --}}
         </div>
         {{-- CART TOTALS --}}
         <div class="px-0 md:px-[20px] flex-none">

@@ -2,9 +2,9 @@
   <div class="px-10 space-y-5">
     <h1 class="font-medium text-lg">SHOW ALL BY: </h1>
     <div class="flex flex-col space-y-3">
-      <a href="/all" class="hover:underline {{request()->is('all') ? 'active' : ''}}">ALL PRODUCTS</a>
-      <a href="/armchairs/*" class="hover:underline {{request()->is('armchairs/*') ? 'active' : ''}}">ARMCHAIRS</a>
-      <a href="/loveseats/*" class="hover:underline {{request()->is('loveseats/*') ? 'active' : ''}}">LOVESEAT</a>
+      <a href="/all-products" class="hover:underline {{request()->is('all') ? 'active' : ''}}">ALL PRODUCTS</a>
+      <a href="shop/armchairs/" class="hover:underline {{request()->is('armchairs/*') ? 'active' : ''}}">ARMCHAIRS</a>
+      <a href="/loveseats/" class="hover:underline {{request()->is('loveseats/*') ? 'active' : ''}}">LOVESEAT</a>
       <a href="/corner-sofas/*" class="hover:underline {{request()->is('corner-sofas/*') ? 'active' : ''}}">CORNER SOFAS</a>
       <a href="/ottomans-footstools/*" class="hover:underline {{request()->is('ottomans-footstools/*') ? 'active' : ''}}">OTTOMANS - FOOTSTOOLS</a>
       <a href="/beds/*" class="hover:underline {{request()->is('beds/*') ? 'active' : ''}}">BEDS</a>

@@ -74,7 +74,7 @@
         <div class="form-check text-sm flex items-center">
           <input type="checkbox" name="validate_checkbox" class="form-check-input h-4 w-4 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" id="acceptTerms&Policy">
           <label class="form-check-label inline-block text-gray-400" for="acceptTerms&Policy">
-            I accept the <a href="#" class="text-black hover:underline">Terms of Use</a> & <a href="#" class="text-black hover:underline">Privacy Policy</a>
+            I accept the <a href="/returns-exchange" class="text-black hover:underline">Terms of Use</a> & <a href="/returns-exchange" class="text-black hover:underline">Privacy Policy</a>
           </label>
         </div>
         <button type="submit" method="POST" class="w-[40%] h-8 bg-black text-white mx-auto text-sm">CREATE</button>

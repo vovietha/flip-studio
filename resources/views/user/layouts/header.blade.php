@@ -17,7 +17,7 @@
       <div class="hidden md:flex space-x-3 text-sm">
         <a href="/collections" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('collections') ? 'active' : ''}}">COLLECTIONS</a>
         <a href="/shop/all-products" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100 {{request()->is('shop/all') ? 'active' : ''}}">SHOP</a>
-        <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a>
+        {{-- <a href="#" class="hover:underline text-gray-500 hover:text-gray-900 py-4 px-3 transition duration-100">ABOUT</a> --}}
       </div>
       {{-- SECONDARY NAV --}}
       @auth
