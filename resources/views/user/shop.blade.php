@@ -13,15 +13,15 @@
     <div class="grid grid-cols-1 col-span-1 sm:grid-cols-2 sm:col-span-1  md:col-span-4 md:grid-cols-4 gap-5 my-[100px] md:my-0 ">
       {{-- CARD-1 --}}
       @foreach($products as $product)
-       <div>
+       <div class="mx-auto px-5 md:px-0">
          <a href="{{url('shop/'.$catalog->slug.'/'.$product->title)}}" class="space-y-3">
           {{-- <a href="{{url('product/'.$product->id)}}" class="space-y-3"> --}}
-            <div class="w-[209px] h-[139px]">
+            <div class="md:w-[209px] :h-[139px]">
               <img src="{{asset('uploads/products-img/'.$product->thumbnail)}}" alt="" class="w-full">
             </div>
             <div class="text-sm space-y-1">
               <h1>{{$product->title}}</h1>
-              <p>{{$product->price}}</p>
+              <p>$ {{$product->price}}</p>
             </div>
           </a>
         </div>       

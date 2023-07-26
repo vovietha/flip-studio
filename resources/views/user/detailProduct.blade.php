@@ -1,7 +1,7 @@
 @extends('user.layouts.app')
 @section('title', 'DETAIL')
 @section('content')
-  <div class="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-5 space-y-10" id="product_data">
+  <div class="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7xl gap-5 space-y-10 mt-10" id="product_data">
     {{-- IMG PRODUCT DESKTOP --}}
     <div class="space-y-10 hidden md:block md:col-span-1 ">
       <img src="{{asset('uploads/products-img/'.$products->thumbnail)}}" alt="">
@@ -18,8 +18,8 @@
         <div class="text-xs space-y-4">
           <p>PRODUCT INFORMATION</p>
           <div class="space-y-2">
-            <p>Dimensions:{{$products->details}}</p>
-            <p>Fabric:{{$products->description}}</p>
+            <p>Dimensions: {{$products->details}}</p>
+            <p>Fabric: {{$products->description}}</p>
           </div>
           <div class="text-xs space-y-2">
             <p>CODE: {{$products->sku}}</p>
