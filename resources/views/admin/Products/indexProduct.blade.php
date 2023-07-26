@@ -2,8 +2,10 @@
 @section('title', 'PRODUCT')
 @section('content')
   <div>
-    <h1>PRODUCTS</h1>
-    <a href="{{ route('admin.products.create')}}">ADD</a>
+    <div class="flex items-center justify-between">
+      <h1 class="font-bold">PRODUCTS</h1>
+      <a href="{{ route('admin.products.create')}}" class="border hover:bg-gray-200 py-2 px-3">Create</a>
+    </div>
     <div>
       <table class="w-full">
         <thead class="border-solid border-b-[1px]">
@@ -22,23 +24,23 @@
         <tbody>
           @foreach($products as $product)
           <tr class="text-center text-sm">
-            <td class="py-3">{{$product->id}}</td>
-            <td class="py-3">{{$product->catalog->name}}</td>
-            <td class="py-3">{{$product->title}}</td>
-            <td class="py-3">{{$product->price}}</td>
-            <td class="py-3">{{$product->description}}</td>
-            <td class="py-3">{{$product->details}}</td>
-            <td class="py-3 flex items-center justify-center">
+            <td class="">{{$product->id}}</td>
+            <td class="">{{$product->catalog->name}}</td>
+            <td class="">{{$product->title}}</td>
+            <td class="">{{$product->price}}</td>
+            <td class="">{{$product->description}}</td>
+            <td class="">{{$product->details}}</td>
+            <td class=" flex items-center justify-center">
               <img src="{{asset('uploads/products-img/'.$product->thumbnail)}}" class="w-[50px] h-[50px]" alt="">
             </td>
-            <td class="py-3">{{$product->sku}}</td>
-            <td class="py-3">{{$product->stock}}</td>
-            <td class="py-3">
-              <a href="{{route('admin.products.edit',$product->id )}}" class="hover:underline inline px-3">EDIT</a>
-              <form action="{{route('admin.products.destroy',$product->id )}}" method="POST" class="inline">
+            <td class="">{{$product->sku}}</td>
+            <td class="">{{$product->stock}}</td>
+            <td class="">
+              <a href="{{route('admin.products.edit',$product->id )}}" class="hover:underline px-3">EDIT</a>
+              <form action="{{route('admin.products.destroy',$product->id )}}" method="POST" class="">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="inline">
+                <button type="submit" class="">
                   <span class="material-icons">
                     highlight_off
                   </span>

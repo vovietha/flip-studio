@@ -14,12 +14,28 @@ class FrontendController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    // public function viewcategory($slug)
+    // {
+    //     $catalog = Catalog::where('slug', $slug)->firstOrFail();
+    //     $products = Product::where('catalog_id', $catalog->id)->get();
+    //     return view('user.shop',compact('catalog','products'));   
+    // }
+
     public function viewcategory($slug)
     {
-        $catalog = Catalog::where('slug', $slug)->firstOrFail();
-        $products = Product::where('catalog_id', $catalog->id)->get();
-        return view('user.shop',compact('catalog','products'));   
+        if ($slug === 'all-products') {
+            // If the slug is 'all-products', get all products without filtering by a specific category
+            $products = Product::all();
+            $catalog = Catalog::where('slug', $slug)->firstOrFail();
+        } else {
+            // If it's not 'all-products', then proceed with the normal behavior
+            $catalog = Catalog::where('slug', $slug)->firstOrFail();
+            $products = Product::where('catalog_id', $catalog->id)->get();
+        }
+
+        return view('user.shop', compact('products', 'catalog'));
     }
+
     public function viewproducts($cate_slug, $prod_title) 
     {
         if (Catalog::where('slug',$cate_slug)->exists())

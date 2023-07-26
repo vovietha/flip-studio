@@ -16,10 +16,12 @@
         <tbody>
           @foreach($orders as $order)
             <tr class="text-center text-sm">
-              <td class="py-3">{{$order->created_at}}</td>
-              <td class="py-3">{{$order->tracking_number}}</td>
-              <td class="py-3">{{$order->total_price}}</td>
-              <td class="text-center px-3">{{$order->status == '0' ? 'PENDING' : 'COMPLETE'}}</td>
+              <td class="py-3">
+                <a  href="{{ route('admin.orders.edit', ['order' => $order->id]) }}">{{ $order->created_at }}</a>
+              </td>
+              <td class="py-3">{{ $order->tracking_number }}</td>
+              <td class="py-3">{{ $order->total_price }}</td>
+              <td class="text-center px-3">{{ $order->status == '0' ? 'PENDING' : 'COMPLETE' }}</td>
             </tr>
           @endforeach
         </tbody>

@@ -53,6 +53,8 @@ Route::get('/shipping', function () {
 });
 //SHOP
 Route::get('shop/{slug}', [FrontendController::class,"viewcategory"])->name('shop');
+// Route::get('shop/all', [FrontendController::class, "viewAllProducts"])->name('view_all_products');
+
 // Route::get('product/{slug}', [FrontendController::class,"viewproducts"])->name('products');
 // DETAIL PRODUCT
 Route::get('shop/{cate_slug}/{prod_title}', [FrontendController::class,"viewproducts"])->name('viewproducts');
@@ -94,6 +96,8 @@ Route::get('/logout', [LoginController::class,"logout"])->name("logout");
 
 // ADMIN ROUTE
 Route::prefix('admin')->name('admin.')->group(function() {
+    Route::get('orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+
     Route::resources([
         'catalogs' => CatalogController::class,
         'products' => ProductController::class,
